@@ -4,7 +4,7 @@ prisma = require("@/lib/prisma");
 
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
-        const { description, address, clientName, clientEmail, clientPhone, userId, scheduledDate } = req.body as unknown as RequestBody;
+        const { description, address, clientName, clientEmail, clientPhone, userId, scheduledDate, warrenty } = req.body as unknown as RequestBody;
 
         const parsedScheduledDate = new Date(scheduledDate);
 
@@ -16,6 +16,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 clientPhone,
                 address,
                 userId,
+                warrenty,
                 scheduledDate: parsedScheduledDate
             },
         });

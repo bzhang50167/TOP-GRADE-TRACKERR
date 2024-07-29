@@ -8,4 +8,5 @@ export type RequestBody = {
     scheduledDate: Date;
     jobId:number;
     id:number;
+    warrenty:number;
 }
