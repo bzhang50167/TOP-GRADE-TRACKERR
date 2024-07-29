@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
     }
 }
 
-export async function PUTJOB(req: NextRequest) {
+export async function PUT(req: NextRequest) {
     try {
         const { description, address, clientName, clientEmail, clientPhone, userId, scheduledDate } = req.body as unknown as RequestBody;
 
