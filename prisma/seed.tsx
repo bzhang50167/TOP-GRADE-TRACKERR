@@ -1,5 +1,5 @@
-prisma = require("@/lib/prisma");
-
+import prisma from "@/lib/prisma";
+// prisma = require("@/lib/prisma");
 
 type User = {
   name: string;
@@ -7,18 +7,19 @@ type User = {
   password: string;
   isAdmin: boolean;
   phone: string;
+  jobs?: object;
 };
 
-type Job = {
-  description: string;
-  userId: number;
-  address: string;
-};
+// type Job = {
+//   description: string;
+//   address: string;
+//   warrenty?: number;
+// };
 
-type Warrenty = {
-  jobId: number;
-  duration: number;
-};
+// type Warrenty = {
+//   jobId: number;
+//   duration: number;
+// };
 
 function getUsers(): Array<User> {
   return [
@@ -28,6 +29,13 @@ function getUsers(): Array<User> {
       password: "lD0=.%JA*",
       isAdmin: false,
       phone: "239 730 8185",
+      jobs: {
+        create: {
+          description: "Pests",
+          address: "21 park place",
+          warrenty: 3
+        }
+      }
     },
     {
       name: "fgladyer1",
@@ -35,6 +43,13 @@ function getUsers(): Array<User> {
       password: "qB5?e6e~O",
       isAdmin: false,
       phone: "606 262 1281",
+      jobs: {
+        create: {
+          description: "Termite",
+          address: "21 park place",
+          warrenty: 2
+        }
+      }
     },
     {
       name: "hthorn2",
@@ -42,6 +57,13 @@ function getUsers(): Array<User> {
       password: "eC9+6mvaQ=wO`{+@",
       isAdmin: false,
       phone: "266 165 3058",
+      jobs: {
+        create: {
+          description: "Termite",
+          address: "90 smith street",
+          warrenty: 3
+        }
+      }
     },
     {
       name: "wbrane3",
@@ -49,6 +71,13 @@ function getUsers(): Array<User> {
       password: 'xX2=HSkCu$$"6B',
       isAdmin: false,
       phone: "336 396 3972",
+      jobs: {
+        create: {
+          description: "Ants",
+          address: "90 smith street",
+          warrenty: 1
+        }
+      }
     },
     {
       name: "Rene",
@@ -74,54 +103,22 @@ function getUsers(): Array<User> {
   ];
 }
 
-function getJobs(): Array<Job> {
-  return [
-    {
-      description: "Pests",
-      userId: 1,
-      address: "21 park place",
-    },
-    {
-      description: "Termite",
-      userId: 2,
-      address: "21 park place",
-    },
-    {
-      description: "Termite",
-      userId: 3,
-      address: "90 smith street",
-    },
-    {
-      description: "Ants",
-      userId: 4,
-      address: "90 smith street",
-    },
-  ];
-}
-
-function getWarrenties(): Array<Warrenty> {
-  return [
-    { jobId: 1, duration: 3 },
-    { jobId: 2, duration: 2 },
-    { jobId: 3, duration: 3 },
-    { jobId: 4, duration: 1 },
-  ];
-}
-
 async function main() {
-  await prisma.warrenty.deleteMany()
-  await prisma.job.deleteMany()
-  await prisma.user.deleteMany()
+  
+  await prisma.user.deleteMany();
 
-  const users = await prisma.user.createMany({
-    data: getUsers(),
-  });
-  const jobs = await prisma.job.createMany({
-    data: getJobs(),
-  });
-  const warrenties = await prisma.warrenty.createMany({
-    data: getWarrenties(),
-  });
+  const userData = getUsers();
+  try {
+    for (let user of userData) {
+      let newUser = await prisma.user.create({
+        data: user,
+      });
+      console.log("User created:", newUser)
+    }
+  } catch (error) {
+    console.error("Error creating users: ", error)
+  }
+
 }
 
 main()
@@ -129,6 +126,6 @@ main()
     console.log(e);
     process.exit(1);
   })
-  .finally(() => {
-    prisma.$disconnect();
+  .finally(async () => {
+    await prisma.$disconnect();
   });
