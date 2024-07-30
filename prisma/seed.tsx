@@ -10,17 +10,6 @@ type User = {
   jobs?: object;
 };
 
-// type Job = {
-//   description: string;
-//   address: string;
-//   warrenty?: number;
-// };
-
-// type Warrenty = {
-//   jobId: number;
-//   duration: number;
-// };
-
 function getUsers(): Array<User> {
   return [
     {
@@ -33,7 +22,7 @@ function getUsers(): Array<User> {
         create: {
           description: "Pests",
           address: "21 park place",
-          warrenty: 3
+          warranty: 3
         }
       }
     },
@@ -47,7 +36,7 @@ function getUsers(): Array<User> {
         create: {
           description: "Termite",
           address: "21 park place",
-          warrenty: 2
+          warranty: 2
         }
       }
     },
@@ -61,7 +50,7 @@ function getUsers(): Array<User> {
         create: {
           description: "Termite",
           address: "90 smith street",
-          warrenty: 3
+          warranty: 3
         }
       }
     },
@@ -75,7 +64,7 @@ function getUsers(): Array<User> {
         create: {
           description: "Ants",
           address: "90 smith street",
-          warrenty: 1
+          warranty: 1
         }
       }
     },
@@ -104,8 +93,9 @@ function getUsers(): Array<User> {
 }
 
 async function main() {
-  
+
   await prisma.user.deleteMany();
+  await prisma.job.deleteMany();
 
   const userData = getUsers();
   try {

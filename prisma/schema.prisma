@@ -28,6 +28,6 @@ model Job {
   description   String
   address       String
   scheduledDate DateTime?
-  warrenty      Int?
+  warranty      Int?
   user          User?     @relation(fields: [userId], references: [id])
 }
