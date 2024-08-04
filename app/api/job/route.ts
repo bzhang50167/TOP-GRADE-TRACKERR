@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       clientPhone,
       userId,
       scheduledDate,
-      warranty,
+      warranty
     } = req.body as unknown as RequestBody;
 
     const parsedScheduledDate = new Date(scheduledDate);
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         address,
         userId,
         scheduledDate: parsedScheduledDate,
-        warranty,
+        warranty
       },
     });
 
