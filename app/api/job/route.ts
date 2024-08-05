@@ -1,6 +1,6 @@
-import { RequestBody } from "@/lib/types";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from '../../../lib/prisma';
+import { RequestBody } from "@/lib/types";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
@@ -13,7 +13,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       userId,
       scheduledDate,
       warranty
-    } = req.body as unknown as RequestBody;
+    } = await req.json() as RequestBody;
 
     const parsedScheduledDate = new Date(scheduledDate);
 
