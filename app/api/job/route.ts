@@ -1,6 +1,6 @@
 import { RequestBody } from "@/lib/types";
 import { NextRequest, NextResponse } from "next/server";
-prisma = require("@/lib/prisma");
+import prisma from '../../../lib/prisma';
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const jobs = await prisma.job.findMany();
     return new Response(JSON.stringify(jobs), { status: 201 });
