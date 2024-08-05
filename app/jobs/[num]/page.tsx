@@ -27,7 +27,6 @@ const Jobs = ({ params }: { params: { num: number } }) => {
     fetchData();
   }, [num]);
   let YOUR_API_KEY: string = process.env.REACT_APP_YOUR_API_KEY as string;
-  YOUR_API_KEY = 'AIzaSyDnKEeDUQ_wf2JhICaZYoSSzYi8SlaeaDI'
   console.log(job);
   useEffect(() => {
     loadScript(`https://maps.googleapis.com/maps/api/js?key=${YOUR_API_KEY}&libraries=places`, () => {
@@ -69,7 +68,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
     if (!window.google) return;
 
     const geocoder = new window.google.maps.Geocoder();
-    geocoder.geocode({ address: job.address }, (results, status) => {
+    geocoder.geocode({ address: job.address }, (results:any, status) => {
       if (status === "OK" && results[0]) {
         const position = results[0].geometry.location;
 
