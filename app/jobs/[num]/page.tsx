@@ -4,11 +4,6 @@ import { useEffect, useState } from "react";
 import { fetchJob } from "../../components/dispatch";
 import { redirect } from "next/navigation";
 
-import * as dotenv from "dotenv";
-
-dotenv.config();
-
-
 const loadScript = (url: string, callback: () => void) => {
   const existingScript = document.querySelector(`script[src="${url}"]`);
   if (!existingScript) {
