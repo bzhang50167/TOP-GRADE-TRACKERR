@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
 
         const job = await prisma.job.findUnique({
             where: {
-                id: parseInt(jobId),
+                id: parseInt(jobId)
             }
         });
 
