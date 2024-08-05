@@ -1,16 +1,15 @@
 import { RequestBody } from "@/lib/types";
 import { NextRequest, NextResponse } from "next/server";
-import prisma from '../../../lib/prisma';
+import prisma from '../../../../lib/prisma';
 
 export async function GET(req: NextRequest) {
+    console.log('Fetching job ID');
     try {
-
         const url = new URL(req.url);
         const jobId = url.pathname.split("/").pop();
-        console.log(jobId,'job id')
-        if (!jobId) {
+        if  (!jobId) {
             return NextResponse.json(
-                { message: "Please provide a group id" },
+                { message: "Please provide a job ID" },
                 {
                     status: 400,
                     statusText: "Bad Request",
@@ -20,18 +19,18 @@ export async function GET(req: NextRequest) {
 
         const job = await prisma.job.findUnique({
             where: {
-                id: parseInt(jobId)
-            }
+                id: parseInt(jobId, 10),
+            },
         });
 
         if (!job) {
-            return new Response('Can not find job', { status: 500 })
+            return new Response('Job not found', { status: 404 });
         }
 
-        return new Response(JSON.stringify(job), { status: 201 })
+        return new Response(JSON.stringify(job), { status: 200 });
     } catch (error) {
         console.error("Error fetching job:", error);
-        return new Response('Error feching job', { status: 500 })
+        return new Response('Error fetching job', { status: 500 });
     }
 }
 

@@ -151,7 +151,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
         {job.description}
       </div>
       <div>
-        Warrenty Duration:
+        {/* Warrenty Duration:
         {" "}
         {job.warrenties[0]?.duration ? job.warrenties[0].duration :
           <span>
@@ -162,14 +162,14 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
               <div className="modal-content flex flex-col gap-5">
                 <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
                 <h2 className="text-xl">Add Warrenty</h2>
-                <span>1 Year Warrenty or 3 Year Warrenty</span>
+                <span>1 Year Warrenty or 3 Year Warrenty</span> */}
                 {/* <div className="flex gap-3">
                   <button onClick={warrentyData1} className="btn btn-error btn-block">Add 1 Year Warrenty</button>
 
                   <button onClick={warrentyData3} className="btn btn-primary btn-block">Add 3 Year Warrenty</button>
                 </div> */}
-              </div>
-            </div></span>}
+              {/* </div>
+            </div></span>} */}
         {job?.warrenties?.length > 0 && (
           <div>
             <label htmlFor="modal-1">Extend or Edit Warranty</label>
