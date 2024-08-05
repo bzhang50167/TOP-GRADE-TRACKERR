@@ -18,7 +18,7 @@ interface Job {
   warranty?: number;
 }
 
-export default function Home() {
+export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([]); // Initialize as an empty array
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [date, setDate] = useState<string | null>(null); // Change type to string | null

@@ -29,7 +29,7 @@ const Jobs = ({ params }: { params: { num: number } }) => {
   let YOUR_API_KEY: string = process.env.REACT_APP_YOUR_API_KEY as string;
   console.log(job);
   useEffect(() => {
-    loadScript(`https://maps.googleapis.com/maps/api/js?key=${YOUR_API_KEY}&libraries=places`, () => {
+    loadScript(`https://maps.googleapis.com/maps/api/js?key=AIzaSyDnKEeDUQ_wf2JhICaZYoSSzYi8SlaeaDI&libraries=places`, () => {
     });
   }, []);
 

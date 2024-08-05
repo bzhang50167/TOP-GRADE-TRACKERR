@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
 
         const url = new URL(req.url);
         const jobId = url.pathname.split("/").pop();
-
+        console.log(jobId,'job id')
         if (!jobId) {
             return NextResponse.json(
                 { message: "Please provide a group id" },
