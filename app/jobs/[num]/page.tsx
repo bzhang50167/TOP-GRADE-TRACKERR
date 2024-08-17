@@ -68,7 +68,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
     if (!window.google) return;
 
     const geocoder = new window.google.maps.Geocoder();
-    geocoder.geocode({ address: job.address }, (results:any, status) => {
+    geocoder.geocode({ address: job.address }, (results: any, status) => {
       if (status === "OK" && results[0]) {
         const position = results[0].geometry.location;
 
@@ -153,12 +153,6 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
       <div>
         Warrenty Duration:
         {job.warranty ? job.warranty :
-        <span>
-          
-        </span>}
-        {/* Warrenty Duration:
-        {" "}
-        {job.warrenties[0]?.duration ? job.warrenties[0].duration :
           <span>
             <label htmlFor="modal-1">Add Warrenty</label>
             <input className="modal-state" id="modal-1" type="checkbox" />
@@ -167,13 +161,19 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
               <div className="modal-content flex flex-col gap-5">
                 <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
                 <h2 className="text-xl">Add Warrenty</h2>
+                <span>1 Year Warrenty or 3 Year Warrenty</span>
+              </div>
+            </div>
+          </span>}
+        {/* Warrenty Duration:
+       
                 <span>1 Year Warrenty or 3 Year Warrenty</span> */}
-                {/* <div className="flex gap-3">
+        {/* <div className="flex gap-3">
                   <button onClick={warrentyData1} className="btn btn-error btn-block">Add 1 Year Warrenty</button>
 
                   <button onClick={warrentyData3} className="btn btn-primary btn-block">Add 3 Year Warrenty</button>
                 </div> */}
-              {/* </div>
+        {/* </div>
             </div></span>} */}
         {job?.warrenties?.length > 0 && (
           <div>
