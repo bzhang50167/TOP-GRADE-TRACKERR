@@ -151,6 +151,11 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
         {job.description}
       </div>
       <div>
+        Warrenty Duration:
+        {job.warranty ? job.warranty :
+        <span>
+          
+        </span>}
         {/* Warrenty Duration:
         {" "}
         {job.warrenties[0]?.duration ? job.warrenties[0].duration :
