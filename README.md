@@ -8,5 +8,9 @@ npm run seed
 
 npm run dev
 
+npx prisma studio
 
 npx prisma generate
+
+Services that expire:
+Google Cloud Platform 
