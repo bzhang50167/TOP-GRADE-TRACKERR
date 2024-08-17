@@ -8,7 +8,7 @@ export default function Nav() {
         </div>
         <div className="navbar-end">
             <a href= "/" className="navbar-item">Home</a>
-            <a href="jobs" className="navbar-item">Jobs</a>
+            <a href="/jobs" className="navbar-item">Jobs</a>
             <a className="navbar-item">CodeBook</a>
         </div>
     </div>
