@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
     try {
-        const { description, address, clientName, clientEmail, clientPhone, userId, scheduledDate } = req.body as unknown as RequestBody;
+        const { description, address, clientName, clientEmail, clientPhone, userId, scheduledDate, warranty } = req.body as unknown as RequestBody;
 
         const parsedScheduledDate = new Date(scheduledDate);
 
@@ -74,7 +74,8 @@ export async function PUT(req: NextRequest) {
                 clientPhone,
                 address,
                 userId,
-                scheduledDate: parsedScheduledDate
+                scheduledDate: parsedScheduledDate,
+                warranty
             },
         });
 

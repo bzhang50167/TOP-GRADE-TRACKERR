@@ -52,3 +52,19 @@ export const editJob = async (info: any, num: number) => {
         return data
     }
 }
+
+export const createWarranty = async(info:number, num: number) => {
+    console.log(info)
+    const res = await fetch(`api/job/${num}`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({warrenty: info})
+    })
+
+    if (res.ok){
+        const data = await res.json()
+        return data
+    }
+}

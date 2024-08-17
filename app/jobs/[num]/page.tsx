@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchJob } from "../../components/dispatch";
+import { createWarranty, fetchJob } from "../../components/dispatch";
 import { redirect } from "next/navigation";
 
 const loadScript = (url: string, callback: () => void) => {
@@ -106,39 +106,27 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
     window.open(uri, "_blank");
   }
 
-  // const warrentyData1 = async () => {
-  //   const data = {
-  //     "duration": 1,
-  //     "jobId": job.id
-  //   }
+  const warrantyData1 = async () => {
 
-  //   await createWarrenty(data);
-  //   window.location.href = "/";
+    await createWarranty(3, job.id);
+    window.location.href = "/";
 
-  // }
+  }
 
-  // const warrentyData3 = async () => {
-  //   const data = {
-  //     "duration": 3,
-  //     "jobId": job.id
-  //   }
+  const warrantyData3 = async () => {
 
-  //   await createWarrenty(data);
-  //   window.location.href = "/";
+    await createWarranty(3, job.id);
+    window.location.href = "/";
 
-  // }
+  }
 
-  // const extendWarrenry = async (num: number) => {
-  //   const data = {
-  //     "duration": job.warrenties[0].duration + 1,
-  //     "jobId": job.id
-  //   }
+  const extendWarranty = async () => {
 
-  //   await editWarrenty(data, num);
-  //   window.location.href = "/";
-  // }
+    await createWarranty(job.warranty+1, job.id);
+    window.location.href = "/";
+  }
 
-
+  console.log(job, 'jobs')
 
   return (
     <div className="p-10 w-full" style={{ width: "100vw" }}>
@@ -151,31 +139,25 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
         {job.description}
       </div>
       <div>
-        Warrenty Duration:
+        Warranty Duration:
         {job.warranty ? job.warranty :
           <span>
-            <label htmlFor="modal-1">Add Warrenty</label>
+            <label htmlFor="modal-1">Add Warranty</label>
             <input className="modal-state" id="modal-1" type="checkbox" />
             <div className="modal">
               <label className="modal-overlay" htmlFor="modal-1"></label>
               <div className="modal-content flex flex-col gap-5">
                 <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-                <h2 className="text-xl">Add Warrenty</h2>
-                <span>1 Year Warrenty or 3 Year Warrenty</span>
+                <h2 className="text-xl">Add Warranty</h2>
+                <span>1 Year Warranty or 3 Year Warranty</span>
+                <div>
+                  <button onClick={warrantyData1} className="btn btn-error btn-block">Add 1 Year Warranty</button>
+                  <button onClick={warrantyData3} className="btn btn-error btn-block">Add 3 Year Warranty</button>
+                </div>
               </div>
             </div>
           </span>}
-        {/* Warrenty Duration:
-       
-                <span>1 Year Warrenty or 3 Year Warrenty</span> */}
-        {/* <div className="flex gap-3">
-                  <button onClick={warrentyData1} className="btn btn-error btn-block">Add 1 Year Warrenty</button>
-
-                  <button onClick={warrentyData3} className="btn btn-primary btn-block">Add 3 Year Warrenty</button>
-                </div> */}
-        {/* </div>
-            </div></span>} */}
-        {job?.warrenties?.length > 0 && (
+        {job.warranty > 0 && (
           <div>
             <label htmlFor="modal-1">Extend or Edit Warranty</label>
             <input className="modal-state" id="modal-1" type="checkbox" />
@@ -185,10 +167,10 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
                 <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
                 <h2 className="text-xl">Extend or Edit Warranty</h2>
                 <span>1 Year Warranty or 3 Year Warranty</span>
-                {/* <div className="flex w-full">
-                  <button onClick={() => extendWarranty(job.warrenties[0].id)} className="btn btn-error btn-block">Extend</button>
+                <div className="flex w-full">
+                  <button onClick={() => extendWarranty} className="btn btn-error btn-block">Extend</button>
                   <button className="btn btn-primary btn-block">Edit</button>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
