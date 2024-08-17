@@ -29,6 +29,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         warranty
       },
     });
+    
 
     return new Response(JSON.stringify(job), { status: 201 });
   } catch (error) {
