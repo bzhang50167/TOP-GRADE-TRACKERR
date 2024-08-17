@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createWarranty, fetchJob } from "../../components/dispatch";
 import { redirect } from "next/navigation";
+import Nav from "@/app/components/nav";
 
 const loadScript = (url: string, callback: () => void) => {
   const existingScript = document.querySelector(`script[src="${url}"]`);
@@ -122,7 +123,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
 
   const extendWarranty = async () => {
     console.log('hit')
-    await createWarranty(job.warranty+1, job.id);
+    await createWarranty(job.warranty + 1, job.id);
     window.location.href = "/";
   }
 
@@ -135,70 +136,75 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
   console.log(job, 'jobs')
 
   return (
-    <div className="p-10 w-full" style={{ width: "100vw" }}>
-      <div className="text-red-100 text-xs mb-5">{job.address}</div>
-      <div className="rounded border-opacity-5 shadow-outline" id="street-view-pano" style={{ width: "100%", height: "300px" }}></div>
-      <div className="mt-8">
-        Description
-      </div>
-      <div className="mb-5">
-        {job.description}
-      </div>
-      <div>
-        Warranty Duration:
-        {job.warranty ? job.warranty :
-          <span>
-            <label htmlFor="modal-1">Add Warranty</label>
-            <input className="modal-state" id="modal-1" type="checkbox" />
-            <div className="modal">
-              <label className="modal-overlay" htmlFor="modal-1"></label>
-              <div className="modal-content flex flex-col gap-5">
-                <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-                <h2 className="text-xl">Add Warranty</h2>
-                <span>1 Year Warranty or 3 Year Warranty</span>
-                <div>
-                  <button onClick={warrantyData1} className="btn btn-error btn-block">Add 1 Year Warranty</button>
-                  <button onClick={warrantyData3} className="btn btn-error btn-block">Add 3 Year Warranty</button>
-                </div>
-              </div>
-            </div>
-          </span>}
-        {job.warranty > 0 && (
-          <div>
-            <label htmlFor="modal-1">Extend or End Warranty</label>
-            <input className="modal-state" id="modal-1" type="checkbox" />
-            <div className="modal">
-              <label className="modal-overlay" htmlFor="modal-1"></label>
-              <div className="modal-content flex flex-col gap-5">
-                <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-                <h2 className="text-xl">Extend or End Warranty</h2>
-                <span>1 Year Warranty or 3 Year Warranty</span>
-                <div className="flex w-full">
-                  <button onClick={extendWarranty} className="btn btn-error btn-block">Extend</button>
-                  <button onClick={endWarranty}className="btn btn-primary btn-block">End</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="flex justify-between">
+    <div>
+
+      <Nav />
+      <div className="p-10 w-full" style={{ width: "100vw" }}>
+        <div className="text-xl mb-10">{job.address}</div>
+        <div className="rounded border-opacity-5 shadow-outline" id="street-view-pano" style={{ width: "100%", height: "300px" }}></div>
+        <div className="mt-8">
+          Description
+        </div>
+        <div className="mb-5">
+          {job.description}
+        </div>
         <div>
-          {job.clientName}
+          Warranty Duration:
+          {job.warranty ? job.warranty :
+            <span>
+              <label htmlFor="modal-1">Add Warranty</label>
+              <input className="modal-state" id="modal-1" type="checkbox" />
+              <div className="modal">
+                <label className="modal-overlay" htmlFor="modal-1"></label>
+                <div className="modal-content flex flex-col gap-5">
+                  <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+                  <h2 className="text-xl">Add Warranty</h2>
+                  <span>1 Year Warranty or 3 Year Warranty</span>
+                  <div>
+                    <button onClick={warrantyData1} className="btn btn-error btn-block">Add 1 Year Warranty</button>
+                    <button onClick={warrantyData3} className="btn btn-error btn-block">Add 3 Year Warranty</button>
+                  </div>
+                </div>
+              </div>
+            </span>}
+          {job.warranty > 0 && (
+            <div>
+              <label htmlFor="modal-1">Extend or End Warranty</label>
+              <input className="modal-state" id="modal-1" type="checkbox" />
+              <div className="modal">
+                <label className="modal-overlay" htmlFor="modal-1"></label>
+                <div className="modal-content flex flex-col gap-5">
+                  <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+                  <h2 className="text-xl">Extend or End Warranty</h2>
+                  <span>1 Year Warranty or 3 Year Warranty</span>
+                  <div className="flex w-full">
+                    <button onClick={extendWarranty} className="btn btn-error btn-block">Extend</button>
+                    <button onClick={endWarranty} className="btn btn-primary btn-block">End</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-        <div className="flex">
-          <button onClick={handleClickCall} className="mr-6">
-            {/* <FontAwesomeIcon icon={faPhone} /> */}
-            phone
-          </button>
-          <button onClick={handleClickText}>
-            sms
-            {/* <FontAwesomeIcon icon={faSms} /> */}
-          </button>
+        <div className="flex justify-between">
+          <div>
+            {job.clientName}
+          </div>
+          <div className="flex">
+            <button onClick={handleClickCall} className="mr-6">
+              {/* <FontAwesomeIcon icon={faPhone} /> */}
+              phone
+            </button>
+            <button onClick={handleClickText}>
+              sms
+              {/* <FontAwesomeIcon icon={faSms} /> */}
+            </button>
+          </div>
         </div>
+        <button className="btn btn-primary btn-block mt-10" onClick={handleDirection}>Directions</button>
       </div>
-      <button onClick={handleDirection}>Directions</button>
     </div>
+
   );
 };
 

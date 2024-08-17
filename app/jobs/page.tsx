@@ -5,6 +5,7 @@ import { createJob, fetchJobs } from '../components/dispatch';
 import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Ensure to import the CSS for DatePicker
+import Nav from '../components/nav';
 
 interface Job {
   id: number;
@@ -115,175 +116,180 @@ export default function Jobs() {
   };
 
   return (
-    <div className="container">
-      <div>
-        <div className="text-red-500 text-3xl m-10">Your Jobs</div>
-        <label className="btn btn-primary" htmlFor="modal-1">Add New Job</label>
-        <input className="modal-state" id="modal-1" type="checkbox" />
-        <div className="modal">
-          <label className="modal-overlay" htmlFor="modal-1"></label>
-          <div className="modal-content flex flex-col gap-5">
-            <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-            <h2 className="text-xl">Adding Job</h2>
-            <section className="bg-gray-2 rounded-xl">
-              <div className="p-8 shadow-lg">
-                <form className="space-y-4">
-                  <div className="w-full">
-                    <label className="sr-only" htmlFor="name">Client Name</label>
-                    <input
-                      className="input input-solid max-w-full"
-                      placeholder="Client Name"
-                      type="text"
-                      id="name"
-                      value={name}
-                      onChange={handleNameChange}
-                    />
-                  </div>
+    <div>
 
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                      <label className="sr-only" htmlFor="email">Client Email</label>
-                      <input
-                        className="input input-solid"
-                        placeholder="Client Email address"
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={handleEmailChange}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="sr-only" htmlFor="phone">Client Phone</label>
-                      <input
-                        className="input input-solid"
-                        placeholder="Client Phone Number"
-                        type="tel"
-                        id="phone"
-                        value={phone}
-                        onChange={handlePhoneChange}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="sr-only" htmlFor="address">Address</label>
-                      <input
-                        className="input input-solid"
-                        placeholder="Address"
-                        type="text"
-                        id="address"
-                        value={street}
-                        onChange={handleStreetChange}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="sr-only" htmlFor="city">City</label>
-                      <input
-                        className="input input-solid"
-                        placeholder="City"
-                        type="text"
-                        id="city"
-                        value={city}
-                        onChange={handleCityChange}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="sr-only" htmlFor="state">State</label>
-                      <input
-                        className="input input-solid"
-                        placeholder="State"
-                        type="text"
-                        id="state"
-                        value={state}
-                        onChange={handleStateChange}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="w-full">
-                    <label className="sr-only" htmlFor="description">Description</label>
-                    <textarea
-                      className="textarea textarea-solid max-w-full"
-                      placeholder="Description"
-                      id="description"
-                      value={description}
-                      onChange={handleDescriptionChange}
-                    ></textarea>
-                  </div>
-
-                  <div className="w-full">
-                    <label className="sr-only" htmlFor="dateTime">Select Date and Time</label>
-                    <DatePicker
-                      selected={startDate}
-                      onChange={handleDateChange}
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={30}
-                      timeCaption="Time"
-                      dateFormat="MMMM d, yyyy h:mm aa"
-                      minDate={new Date()}
-                      className="input input-solid"
-                    />
-                  </div>
-                  <button onClick={submitData} className={`btn btn-error btn-block ${isFormValid() ? '' : 'disabled'}`} disabled={!isFormValid()}>Add</button>
-
-                  <button className="btn btn-block">Cancel</button>
-                </form>
-              </div>
-            </section>
-          </div>
-        </div>
+      <Nav />
+      <div className="container">
         <div>
-          {jobs.length > 0 ? (
-            sortByDate(jobs).map((job: Job) => (
-              <Link href={`/jobs/${job.id}`} key={job.id}>
-                <div className="flex justify-between mt-8">
-                  <div className="text-content2">
-                    DATE: {new Date(job.scheduledDate).toLocaleDateString()}
-                  </div>
-                  <div className="text-content2">
-                    TIME:{" "}
-                    {new Date(job.scheduledDate).toLocaleTimeString([], {
-                      hour: "numeric",
-                      minute: "2-digit",
-                      hour12: true,
-                    })}
-                  </div>
+          <div className="text-red-500 text-3xl m-10">Your Jobs</div>
+          <label className="btn btn-primary" htmlFor="modal-1">Add New Job</label>
+          <input className="modal-state" id="modal-1" type="checkbox" />
+          <div className="modal">
+            <label className="modal-overlay" htmlFor="modal-1"></label>
+            <div className="modal-content flex flex-col gap-5">
+              <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
+              <h2 className="text-xl">Adding Job</h2>
+              <section className="bg-gray-2 rounded-xl">
+                <div className="p-8 shadow-lg">
+                  <form className="space-y-4">
+                    <div className="w-full">
+                      <label className="sr-only" htmlFor="name">Client Name</label>
+                      <input
+                        className="input input-solid max-w-full"
+                        placeholder="Client Name"
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={handleNameChange}
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      <div>
+                        <label className="sr-only" htmlFor="email">Client Email</label>
+                        <input
+                          className="input input-solid"
+                          placeholder="Client Email address"
+                          type="email"
+                          id="email"
+                          value={email}
+                          onChange={handleEmailChange}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="sr-only" htmlFor="phone">Client Phone</label>
+                        <input
+                          className="input input-solid"
+                          placeholder="Client Phone Number"
+                          type="tel"
+                          id="phone"
+                          value={phone}
+                          onChange={handlePhoneChange}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="sr-only" htmlFor="address">Address</label>
+                        <input
+                          className="input input-solid"
+                          placeholder="Address"
+                          type="text"
+                          id="address"
+                          value={street}
+                          onChange={handleStreetChange}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="sr-only" htmlFor="city">City</label>
+                        <input
+                          className="input input-solid"
+                          placeholder="City"
+                          type="text"
+                          id="city"
+                          value={city}
+                          onChange={handleCityChange}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="sr-only" htmlFor="state">State</label>
+                        <input
+                          className="input input-solid"
+                          placeholder="State"
+                          type="text"
+                          id="state"
+                          value={state}
+                          onChange={handleStateChange}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="w-full">
+                      <label className="sr-only" htmlFor="description">Description</label>
+                      <textarea
+                        className="textarea textarea-solid max-w-full"
+                        placeholder="Description"
+                        id="description"
+                        value={description}
+                        onChange={handleDescriptionChange}
+                      ></textarea>
+                    </div>
+
+                    <div className="w-full">
+                      <label className="sr-only" htmlFor="dateTime">Select Date and Time</label>
+                      <DatePicker
+                        selected={startDate}
+                        onChange={handleDateChange}
+                        showTimeSelect
+                        timeFormat="HH:mm"
+                        timeIntervals={30}
+                        timeCaption="Time"
+                        dateFormat="MMMM d, yyyy h:mm aa"
+                        minDate={new Date()}
+                        className="input input-solid"
+                      />
+                    </div>
+                    <button onClick={submitData} className={`btn btn-error btn-block ${isFormValid() ? '' : 'disabled'}`} disabled={!isFormValid()}>Add</button>
+
+                    <button className="btn btn-block">Cancel</button>
+                  </form>
                 </div>
-                <div className="card">
-                  <div className="card-body">
-                    <div>
-                      <div className="card-header p-4">{job.address}</div>
+              </section>
+            </div>
+          </div>
+          <div>
+            {jobs.length > 0 ? (
+              sortByDate(jobs).map((job: Job) => (
+                <Link href={`/jobs/${job.id}`} key={job.id}>
+                  <div className="flex justify-between mt-8">
+                    <div className="text-content2">
+                      DATE: {new Date(job.scheduledDate).toLocaleDateString()}
                     </div>
-                    <div className="text-content2 flex justify-between">
-                      <div>
-                        {job.clientName}
-                      </div>
-                      <div>
-                        {job.clientPhone}
-                      </div>
+                    <div className="text-content2">
+                      TIME:{" "}
+                      {new Date(job.scheduledDate).toLocaleTimeString([], {
+                        hour: "numeric",
+                        minute: "2-digit",
+                        hour12: true,
+                      })}
                     </div>
-                    <div className="text-content2 flex justify-left">
+                  </div>
+                  <div className="card">
+                    <div className="card-body">
                       <div>
-                        <h3>
-                          Description:
-                        </h3>
-                        <div className="text-content3">
-                          {job.description}
+                        <div className="card-header p-4">{job.address}</div>
+                      </div>
+                      <div className="text-content2 flex justify-between">
+                        <div>
+                          {job.clientName}
+                        </div>
+                        <div>
+                          {job.clientPhone}
+                        </div>
+                      </div>
+                      <div className="text-content2 flex justify-left">
+                        <div>
+                          <h3>
+                            Description:
+                          </h3>
+                          <div className="text-content3">
+                            {job.description}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))
-          ) : (
-            <p>No jobs available</p>
-          )}
+                </Link>
+              ))
+            ) : (
+              <p>No jobs available</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
+
   );
 }
