@@ -121,8 +121,14 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
   }
 
   const extendWarranty = async () => {
-
+    console.log('hit')
     await createWarranty(job.warranty+1, job.id);
+    window.location.href = "/";
+  }
+
+  const endWarranty = async () => {
+    console.log('hit')
+    await createWarranty(0, job.id);
     window.location.href = "/";
   }
 
@@ -159,17 +165,17 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
           </span>}
         {job.warranty > 0 && (
           <div>
-            <label htmlFor="modal-1">Extend or Edit Warranty</label>
+            <label htmlFor="modal-1">Extend or End Warranty</label>
             <input className="modal-state" id="modal-1" type="checkbox" />
             <div className="modal">
               <label className="modal-overlay" htmlFor="modal-1"></label>
               <div className="modal-content flex flex-col gap-5">
                 <label htmlFor="modal-1" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-                <h2 className="text-xl">Extend or Edit Warranty</h2>
+                <h2 className="text-xl">Extend or End Warranty</h2>
                 <span>1 Year Warranty or 3 Year Warranty</span>
                 <div className="flex w-full">
-                  <button onClick={() => extendWarranty} className="btn btn-error btn-block">Extend</button>
-                  <button className="btn btn-primary btn-block">Edit</button>
+                  <button onClick={extendWarranty} className="btn btn-error btn-block">Extend</button>
+                  <button onClick={endWarranty}className="btn btn-primary btn-block">End</button>
                 </div>
               </div>
             </div>
