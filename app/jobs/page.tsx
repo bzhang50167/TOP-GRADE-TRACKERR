@@ -6,6 +6,7 @@ import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Ensure to import the CSS for DatePicker
 import Nav from '../components/nav';
+import { redirect } from 'next/navigation';
 
 interface Job {
   id: number;
@@ -120,13 +121,16 @@ export default function Jobs() {
       console.error('Error creating job:', error);
     }
   };
+  const handleClick = (job: Job) => {
+    return redirect(`/jobs/${job.id}`)
+  }
 
   return (
-    <div>
+    <div className=''>
 
       <Nav />
-      <div className="container border-red-600 border-2">
-        <div className="text-blue-500 text-3xl m-10">Your Jobs</div>
+      <div className="flex-col w-screen border-red-600 border-2">
+        <h3 className="text-blue-500 text-3xl m-10">Your Jobs</h3>
         <label className="btn btn-primary" htmlFor="modal-1">Add New Job</label>
         <input className="modal-state" id="modal-1" type="checkbox" />
         <div className="modal">
@@ -256,11 +260,12 @@ export default function Jobs() {
             </section>
           </div>
         </div>
-        <div>
+        {/* All Cards */}
+        <div className='flex-col w-10/12 items-center self-center mt-8 p-4 border-2 border-black-400 gap-3'>
           {jobs.length > 0 ? (
             sortByDate(jobs).map((job: Job) => (
-              <Link href={`/jobs/${job.id}`} key={job.id}>
-                <div className="flex pl-10 pr-10 mt-8">
+              <div onClick={() => handleClick(job)} key={job.id}>
+                <div className="flex justify-between px-4">
                   <div className="text-content2 text-black">
                     DATE: {new Date(job.scheduledDate).toLocaleDateString()}
                   </div>
@@ -273,7 +278,8 @@ export default function Jobs() {
                     })}
                   </div>
                 </div>
-                <div className="card bg-primary w-screen">
+                {/* SINGLE CARD */}
+                <div className=" bg-primary w-11/12 items-center self-center">
                   <div className="card-body">
                     <div>
                       <div className="card-header p-4">{job.address}</div>
@@ -298,7 +304,7 @@ export default function Jobs() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))
           ) : (
             <p>No jobs available</p>
