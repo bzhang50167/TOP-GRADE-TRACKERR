@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { createJob, fetchJobs } from '../components/dispatch';
-import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Ensure to import the CSS for DatePicker
 import Nav from '../components/nav';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface Job {
   id: number;
@@ -21,6 +20,7 @@ interface Job {
 }
 
 export default function Jobs() {
+  const router = useRouter()
   const [jobs, setJobs] = useState<Job[]>([]); // Initialize as an empty array
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [date, setDate] = useState<string | null>(null); // Change type to string | null
@@ -122,7 +122,7 @@ export default function Jobs() {
     }
   };
   const handleClick = (job: Job) => {
-    return redirect(`/jobs/${job.id}`)
+    router.push(`/jobs/${job.id}`)
   }
 
   return (
