@@ -10,3 +10,15 @@ export type RequestBody = {
     id:number;
     warranty?:number;
 }
+
+export interface Job {
+    id: number;
+    description: string;
+    address: string;
+    clientName: string;
+    clientEmail: string;
+    clientPhone: string;
+    userId: number;
+    scheduledDate: string;
+    warranty: number;
+  }

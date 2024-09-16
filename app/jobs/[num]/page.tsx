@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { createWarranty, fetchJob } from "../../components/dispatch";
 import { redirect } from "next/navigation";
 import Nav from "@/app/components/nav";
+import ExtendOrEndWarrantyModal from "@/app/components/ExtendOrEndWarrantyModal";
 
 const loadScript = (url: string, callback: () => void) => {
   const existingScript = document.querySelector(`script[src="${url}"]`);
@@ -150,7 +151,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
         </div>
         <div>
           Warranty Duration:
-          {job.warranty ? job.warranty :
+          {job.warranty ? <span> {job.warranty} years</span> :
             <span>
               <label htmlFor="modal-1">Add Warranty</label>
               <input className="modal-state" id="modal-1" type="checkbox" />
@@ -183,6 +184,8 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
                   </div>
                 </div>
               </div>
+              <ExtendOrEndWarrantyModal job={job}/>
+
             </div>
           )}
         </div>
