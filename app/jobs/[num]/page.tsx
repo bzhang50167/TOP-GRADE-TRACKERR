@@ -184,7 +184,7 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
                   </div>
                 </div>
               </div>
-              <ExtendOrEndWarrantyModal job={job}/>
+              {/* <ExtendOrEndWarrantyModal job={job}/> */}
 
             </div>
           )}
