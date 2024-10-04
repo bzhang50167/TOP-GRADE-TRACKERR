@@ -1,138 +1,374 @@
 [
-    {
-      "code": "ISO",
-      "text": "FINDING - Old evidence of subterranean termites was noted at the ___ as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SI",
-      "text": "FINDING - Evidence of subterranean termites infestation was noted at the __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SS",
-      "text": "FINDING - Evidence of subterranean termites was noted in the subarea soil as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SP",
-      "text": "FINDING - Evidence of subterranean termites was noted at the porch wood members as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SB",
-      "text": "FINDING - Evidence of subterranean termites was noted at the __ baseboard(s) as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SDF",
-      "text": "FINDING - Subterranean termite damage was noted to the floor joist(s) as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SA",
-      "text": "FINDING - Evidence of subterranean termites noted in the attic area wood members as indicated by __ on the diagram."
-    },
-    {
-      "code": "1KP",
-      "text": "FINDING - Evidence of drywood termites infestation was noted at the porch wood members as indicated by __ on the diagram."
-    },
-    {
-      "code": "1KA",
-      "text": "FINDING - Evidence of drywood termites infestation was noted in the attic framing as indicated by __ on the diagram."
-    },
-    {
-      "code": "1KPC",
-      "text": "FINDING - Evidence of drywood termites infestation was noted at the patio cover as indicated by __ on the diagram."
-    },
-    {
-      "code": "1K1A",
-      "text": "FINDING - Evidence of drywood termite infestation leading to a inaccessible area was noted at the __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "FDR1",
-      "text": "FINDING - Evidence of fungus and dry rot damage was noted at the __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "1SF",
-      "text": "FINDING - Evidence of surface fungus was noted at __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "1WBB",
-      "text": "FINDING - Evidence of wood boring beetles was noted at __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "1CD",
-      "text": "FINDING - Cellulose debris was noted scattered throughout the subarea soil as indicated by __ on the diagram."
-    },
-    {
-      "code": "2CD",
-      "text": "FINDING - Cellulose debris was noted at the subarea soil as indicated by __ on the diagram."
-    },
-    {
-      "code": "1KIR",
-      "text": "FINDING - Evidence of drywood termites infestation was noted at the rafter tail(s) leading into inaccessible areas as indicated by __ on the diagram."
-    },
-    {
-      "code": "1KRD",
-      "text": "FINDING - Drywood termite damage was noted at the rafter tail(s) as indicated by __ on the diagram."
-    },
-    {
-      "code": "1IAA",
-      "text": "FINDING - Portions of attic framing was inaccessible during the inspection due to __."
-    },
-    {
-      "code": "1IAS",
-      "text": "FINDING - Portions of the substructure framing was inaccessible during the inspection due to __."
-    },
-    {
-      "code": "2IAS",
-      "text": "FINDING - Portions of the subfloor framing was inaccessible during the inspection due to __."
-    },
-    {
-      "code": "1IAG",
-      "text": "FINDING - A portion of the garage framing was inaccessible for inspection due to storage."
-    },
-    {
-      "code": "1KD",
-      "text": "FINDING - Drywood termite damage was noted at the __ as indicated by __ on the diagram."
-    },
-    {
-      "code": "FDR2",
-      "text": "FINDING - The wood siding has been fungus damaged at the area indicated by __ on the diagram."
-    },
-    {
-      "code": "ZERO1",
-      "text": "FINDING - The area indicated by __ on the diagram is a zero lot line. No access was provided to this area at the time of the inspection. No representations are made."
-    },
-    {
-      "code": "T1",
-      "text": "FINDING - The toilet in the __ is loose as indicated by __ on the diagram."
-    },
-    {
-      "code": "FB1",
-      "text": "FINDING - Form boards/stakes were noted embedded in the subarea soil as indicated by __ on the diagram."
-    },
-    {
-      "code": "PL1",
-      "text": "FINDING - A plumbing leak was noted in the subarea causing an excessive moisture condition as indicated by __ on the diagram."
-    },
-    {
-      "code": "DS1",
-      "text": "FINDING - The soil was damp and/or wet at the time of the inspection as indicated by __ on the diagram."
-    },
-    {
-      "code": "EP1",
-      "text": "FINDING - The exterior paint was weathered and peeling."
-    },
-    {
-      "code": "BV1",
-      "text": "FINDING - Broken vent screen was noted at the area indicated by __ on the diagram."
-    },
-    {
-      "code": "1SES",
-      "text": "FINDING - Exterior stucco extends below exterior grade. This condition could conceal and contribute to termite and/or fungus infection."
-    },
-    {
-      "code": "SC1",
-      "text": "FINDING - Broken and/or stucco cracks noted at the exterior walls as indicated by __ on the diagram."
-    },
-    {
-      "code": "VC1",
-      "text": "FINDING - The vegetation/plants is in contact with the structure which can create an excessive moisture condition as indicated by __ on the diagram."
-    }
-  ]
+  {
+    "code": "ISO",
+    "text": "FINDING - Old evidence of subterranean termites was noted at the ___ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SI",
+    "text": "FINDING - Evidence of subterranean termites infestation was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SS",
+    "text": "FINDING - Evidence of subterranean termites was noted in the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SP",
+    "text": "FINDING - Evidence of subterranean termites was noted at the porch wood members as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SB",
+    "text": "FINDING - Evidence of subterranean termites was noted at the __ baseboard(s) as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SDF",
+    "text": "FINDING - Subterranean termite damage was noted to the floor joist(s) as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SA",
+    "text": "FINDING - Evidence of subterranean termites noted in the attic area wood members as indicated by __ on the diagram."
+  },
+  {
+    "code": "1KP",
+    "text": "FINDING - Evidence of drywood termites infestation was noted at the porch wood members as indicated by __ on the diagram."
+  },
+  {
+    "code": "1KA",
+    "text": "FINDING - Evidence of drywood termites infestation was noted in the attic framing as indicated by __ on the diagram."
+  },
+  {
+    "code": "1KPC",
+    "text": "FINDING - Evidence of drywood termites infestation was noted at the patio cover as indicated by __ on the diagram."
+  },
+  {
+    "code": "1K1A",
+    "text": "FINDING - Evidence of drywood termite infestation leading to a inaccessible area was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "FDR1",
+    "text": "FINDING - Evidence of fungus and dry rot damage was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SF",
+    "text": "FINDING - Evidence of surface fungus was noted at __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1WBB",
+    "text": "FINDING - Evidence of wood boring beetles was noted at __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1CD",
+    "text": "FINDING - Cellulose debris was noted scattered throughout the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "2CD",
+    "text": "FINDING - Cellulose debris was noted at the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "1KIR",
+    "text": "FINDING - Evidence of drywood termites infestation was noted at the rafter tail(s) leading into inaccessible areas as indicated by __ on the diagram."
+  },
+  {
+    "code": "1KRD",
+    "text": "FINDING - Drywood termite damage was noted at the rafter tail(s) as indicated by __ on the diagram."
+  },
+  {
+    "code": "1IAA",
+    "text": "FINDING - Portions of attic framing was inaccessible during the inspection due to __."
+  },
+  {
+    "code": "1IAS",
+    "text": "FINDING - Portions of the substructure framing was inaccessible during the inspection due to __."
+  },
+  {
+    "code": "2IAS",
+    "text": "FINDING - Portions of the subfloor framing was inaccessible during the inspection due to __."
+  },
+  {
+    "code": "1IAG",
+    "text": "FINDING - A portion of the garage framing was inaccessible for inspection due to storage."
+  },
+  {
+    "code": "1KD",
+    "text": "FINDING - Drywood termite damage was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "FDR2",
+    "text": "FINDING - The wood siding has been fungus damaged at the area indicated by __ on the diagram."
+  },
+  {
+    "code": "ZERO1",
+    "text": "FINDING - The area indicated by __ on the diagram is a zero lot line. No access was provided to this area at the time of the inspection. No representations are made."
+  },
+  {
+    "code": "T1",
+    "text": "FINDING - The toilet in the __ is loose as indicated by __ on the diagram."
+  },
+  {
+    "code": "FB1",
+    "text": "FINDING - Form boards/stakes were noted embedded in the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "PL1",
+    "text": "FINDING - A plumbing leak was noted in the subarea causing an excessive moisture condition as indicated by __ on the diagram."
+  },
+  {
+    "code": "DS1",
+    "text": "FINDING - The soil was damp and/or wet at the time of the inspection as indicated by __ on the diagram."
+  },
+  {
+    "code": "EP1",
+    "text": "FINDING - The exterior paint was weathered and peeling."
+  },
+  {
+    "code": "BV1",
+    "text": "FINDING - Broken vent screen was noted at the area indicated by __ on the diagram."
+  },
+  {
+    "code": "1SES",
+    "text": "FINDING - Exterior stucco extends below exterior grade. This condition could conceal and contribute to termite and/or fungus infection."
+  },
+  {
+    "code": "SC1",
+    "text": "FINDING - Broken and/or stucco cracks noted at the exterior walls as indicated by __ on the diagram."
+  },
+  {
+    "code": "VC1",
+    "text": "FINDING - The vegetation/plants is in contact with the structure which can create an excessive moisture condition as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SW",
+    "text": "FINDING - Standing water has made portion of the subarea inaccessible for inspection as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SFIA",
+    "text": "FINDING - There is insulation that has been installed throughout the crawl space subfloor making much of this framing inaccessible for inspection. No representations are made of the condition of the framing in this area indicated by __ on the diagram. We found no adverse conditions that would warrant removal of the insulation at this time."
+  },
+  {
+    "code": "1SWOLLEN",
+    "text": "FINDING - The drywall is swollen/cracked at the area indicated by __ on the diagram. This is an indication of possible current or past leakage."
+  },
+  {
+    "code": "2KD",
+    "text": "FINDING - Drywood termite damage was noted at the fascia board as indicated by 11B on the diagram. **Upon request we will issue a supplemental report and bid for repairs**"
+  },
+  {
+    "code": "1BG",
+    "text": "FINDING - Gutter(s) appear to be in a deteriorated condition as indicated by __ on the diagram."
+  },
+  {
+    "code": "1PSE",
+    "text": "FINDING - There is past evidence of subterranean termite activity noted at the __ as indicated by __ on the diagram. We found no current activity that warrants any chemical treatment at this time."
+  },
+  {
+    "code": "LT1",
+    "text": "FINDING - Noted loose tiles in the basement bathroom wall."
+  },
+  {
+    "code": "1SCD",
+    "text": "FINDING - The window trim is swollen at the area indicated by 11F on the diagram. This is cosmetic damage."
+  },
+  {
+    "code": "1EWC",
+    "text": "FINDING - Earth wood contact(s) noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "DF1",
+    "text": "FINDING - There is minor fungus damage at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SPE",
+    "text": "FINDING - There is past evidence of subterranean termites noted in the substructure framing. We found no current activity that warrants any chemical treatment at this time."
+  },
+  {
+    "code": "1GAP",
+    "text": "FINDING - A gap was noted in the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1STAKE",
+    "text": "FINDING - Form board/stakes were noted embedded in the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "1OLDK",
+    "text": "FINDING - There are drywood termite pellets at the __ as indicated by __ on the diagram. This property has been fumigated in the past. It is a possibility that these are old and have not been removed and/or mask."
+  },
+  {
+    "code": "1IAH",
+    "text": "FINDING - Some of the roof eaves, trims around the structure are too high to be physically inspected at this time. As a result, no specific representations are made concerning the condition of the wood members. A visual inspection from ground level did not reveal any damage."
+  },
+  {
+    "code": "1WS",
+    "text": "FINDING - Wood screed(s) are in contact with the structure creating a possible entry point for subterranean termites as indicated by __ on the diagram."
+  },
+  {
+    "code": "1SH",
+    "text": "FINDING - The window in the shower is below the shower head. This area can accumulate water."
+  },
+  {
+    "code": "1WSE",
+    "text": "FINDING - Water stains were noted at the __ as indicated by __ on the diagram. No fungus damage was noted at this area."
+  },
+  {
+    "code": "1SIG",
+    "text": "FINDING - Subterranean termites noted coming up through the garage slab and entering the structure."
+  },
+  {
+    "code": "1SPT",
+    "text": "FINDING - No evidence of subterranean termites noted at the time of the inspection."
+  },
+  {
+    "code": "1WATER",
+    "text": "FINDING - Evidence of water stains noted in the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1MT",
+    "text": "FINDING - Missing and/or broken tile noted in the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1FG",
+    "text": "FINDING - There is a faulty grade condition as indicated by __ on the diagram. A faulty grade condition exists when the earth's level is even with or above the top of the adjacent foundation."
+  },
+  {
+    "code": "1PS",
+    "text": "FINDING - No evidence of subterranean termites noted on the structure during the time of the inspection."
+  },
+  {
+    "code": "IAV",
+    "text": "FINDING - Portion of the exterior framing was inaccessible during the inspection due to vegetation as indicated by __ on the diagram."
+  },
+  {
+    "code": "1GSD",
+    "text": "FINDING - The garage side door is delaminated and weathered."
+  },
+  {
+    "code": "IAD",
+    "text": "FINDING - Underneath the deck was inaccessible for inspection due to a low clearance."
+  },
+  {
+    "code": "EIS",
+    "text": "FINDING - A portion of the exterior was inaccessible due to storage."
+  },
+  {
+    "code": "KTG",
+    "text": "FINDING - Missing grout on kitchen tile."
+  },
+  {
+    "code": "2WSE",
+    "text": "FINDING - Water stains were noted at the __ as indicated by __ on the diagram. This is an indication of possible current or past leakage."
+  },
+  {
+    "code": "CWS1",
+    "text": "FINDING - __ are in contact with the structure creating a possible entry point for subterranean termites. As indicated by __ on the diagram."
+  },
+  {
+    "code": "1SD",
+    "text": "FINDING - Subterranean termite damage was noted to the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "PLBLANK",
+    "text": "FINDING - A plumbing leak was noted in the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "3BG",
+    "text": "FINDING - The gutter downspout appears to provide inadequate drainage away from the structure as indicated by __ on the diagram."
+  },
+  {
+    "code": "DWI1",
+    "text": "FINDING - Evidence of dampwood termites noted in the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "DWD1",
+    "text": "FINDING - Dampwood termite damage noted to the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "2OLDK",
+    "text": "FINDING - Old evidence of drywood termites noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "SH1",
+    "text": "FINDING - The window in the shower is below the shower head. This area can accumulate water."
+  },
+  {
+    "code": "NW1",
+    "text": "FINDING - The water was turned off at the time of the inspection and we were unable to water test the areas that are normally tested in a termite inspection."
+  },
+  {
+    "code": "1MC",
+    "text": "FINDING - Missing caulking and/or grout noted at the __ indicated by __ on the diagram."
+  },
+  {
+    "code": "1PLU",
+    "text": "FINDING - A plumbing leak was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "PLU1",
+    "text": "FINDING - A plumbing leak was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "MG1",
+    "text": "FINDING - Missing grout noted at __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1WEATHERED",
+    "text": "FINDING - Weathering and/or peeling noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1C",
+    "text": "FINDING - Evidence of corrosion noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1CSP",
+    "text": "FINDING - The shower pan is damaged and/or cracked as indicated by __ on the diagram."
+  },
+  {
+    "code": "1LIT",
+    "text": "This inspection was limited to only identifying termite infestation(s)."
+  },
+  {
+    "code": "1SICD",
+    "text": "FINDING - Subterranean termite infested cellulose debris was noted at the subarea soil as indicated by __ on the diagram."
+  },
+  {
+    "code": "1LV",
+    "text": "FINDING - Lack of ventilation noted in the subarea as indicated by __ on the diagram. The lack of ventilation can contribute to growth of wood destroying pests or organisms."
+  },
+  {
+    "code": "1NE",
+    "text": "FINDING - No evidence of an active wood destroying organism infestation or infections found during the time of the inspection."
+  },
+  {
+    "code": "1AEWC",
+    "text": "FINDING - The __ attached to the structure creates earth to wood contact."
+  },
+  {
+    "code": "1WBBD",
+    "text": "FINDING - Wood boring beetle damage was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "WD1",
+    "text": "FINDING - Evidence of minor water damage noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1LSE",
+    "text": "FINDING - Evidence of water leak was noted at the shower enclosure as indicated by __ on the diagram."
+  },
+  {
+    "code": "1EWCF",
+    "text": "FINDING - The __ attached to the structure creates Earth to wood contact."
+  },
+  {
+    "code": "1OWBB",
+    "text": "FINDING - Old evidence of wood boring beetles was noted at the __ as indicated by __ on the diagram."
+  },
+  {
+    "code": "1UNWT",
+    "text": "FINDING - The upstairs stall shower was inspected, however it was not water tested due to being over a finished ceiling. No outward signs of leakage noted."
+  },
+  {
+    "code": "3SWOLLEN",
+    "text": "FINDING - The __ is swollen and/or cracked at the area indicated by __ on the diagram. This is an indication of possible current or past leakage."
+  },
+  {
+    "code": "1CT",
+    "text": "FINDING - Cracked and/or broken tile noted in the __ as indicated by __ on the diagram."
+  }
+]

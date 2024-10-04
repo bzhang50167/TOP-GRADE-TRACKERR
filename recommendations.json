@@ -1,394 +1,394 @@
 [
-    {
-      "code": "1TSS",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to knock down the tubes and treat the subarea soil with TERMIDOR (FIPRONIL) for the control of termites. Area must be vacated at the time of application."
-    },
-    {
-      "code": "1TSE",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to rod and treat the exterior soil with TERMIDOR (FIPRONIL) for the control of termites. Any holes drilled in the concrete will be patched with mortar."
-    },
-    {
-      "code": "1TSG",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to drill through the interior garage concrete and inject TERMIDOR (FIPRONIL). NOTE* This is a local treatment method."
-    },
-    {
-      "code": "1SFT",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to knock down mud tubes and treat the exterior soil, exterior concrete, and subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of termites. Any holes made in the concrete will be filled with mortar."
-    },
-    {
-      "code": "3CD",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove cellulose debris of rakeable size from the subarea and dispose of (wood, paper products)."
-    },
-    {
-      "code": "4CD",
-      "text": "RECOMMENDATION - Owner to remove cellulose debris from the subarea."
-    },
-    {
-      "code": "2KIA",
-      "text": "RECOMMENDATION/PRIMARY - Vacate premises and seal structure. Fumigate with lethal gas (SULFURYL FLUORIDE), remove the seals, and air out the building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. SECONDARY/SUB-STANDARD - TOP GRADE TERMITE CONTROL to treat the entire infested area with TERMIDOR (FIPRONIL) by injecting it into the termite colony. Cover and/or remove evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included)."
-    },
-    {
-      "code": "1CDS",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove infested cellulose debris and treat subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of termites."
-    },
-    {
-      "code": "1LCFD",
-      "text": "RECOMMENDATION - Owner and/or licensed contractor to correct fungus condition and/or remove and replace accessible fungus and dry rot damaged wood and/or materials, treat area with state registered fungicide, and prime and paint area for protection. TOP GRADE TERMITE CONTROL is not recommended for this task."
-    },
-    {
-      "code": "2SF",
-      "text": "RECOMMENDATION - Owner and/or licensed contractor to correct surface fungus condition and/or remove surface fungus with a wire brush and treat area with state registered fungicide to correct. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
-    },
-    {
-      "code": "1SFW",
-      "text": "RECOMMENDATION - Wire brush and treat infected wood members with (TIMBOR) a registered fungicide in accordance with the manufacturer's label. This must be performed by a licensed chemical applicator."
-    },
-    {
-      "code": "1TGR",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL repair."
-    },
-    {
-      "code": "1TGRR",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to repair. If additional damage is found to extend into inaccessible areas, TOP GRADE TERMITE CONTROL will issue a supplemental report with any additional findings, recommendations, and bids."
-    },
-    {
-      "code": "2WBB",
-      "text": "RECOMMENDATION/PRIMARY - Vacate premises and seal structure. Fumigate with lethal gas (SULFURYL FLUORIDE), remove the seals, and air out the building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. SECONDARY/SUB-STANDARD - TOP GRADE TERMITE CONTROL to treat the entire infested area with BORA-CARE by injecting it into the beetle colony. Cover and/or remove evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included)."
-    },
-    {
-      "code": "1SMR",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged shingle molding as necessary. The bid includes repairing the roof covering where disturbed by repairs."
-    },
-    {
-      "code": "FDR2",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged portion of the siding. Replace with new material as necessary. We will attempt to match the siding as close as possible. There are certain siding products that are not available and a similar siding will be used. Paint to match as close as possible."
-    },
-    {
-      "code": "KD1",
-      "text": "RECOMMENDATION - Remove the drywood termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids. Paint to match."
-    },
-    {
-      "code": "FDR3",
-      "text": "RECOMMENDATION - Remove and replace the fungus damaged wood members noted at the _______ with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings."
-    },
-    {
-      "code": "ZER02",
-      "text": "RECOMMENDATION - Upon request we will return to the property once this area has been made accessible by others. Issue a supplemental report upon inspection."
-    },
-    {
-      "code": "WBB3",
-      "text": "RECOMMENDATION - Beetle damage appears minor and wood member does not appear to be structurally weakened. No recommendation for repair at this time. Periodic inspection advised."
-    },
-    {
-      "code": "FDR4",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the fungus damaged wood with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids. Paint to match included."
-    },
-    {
-      "code": "T2",
-      "text": "RECOMMENDATION - Owner and/or licensed contractor to remove the toilet and replace the wax seal with new wax seal. Reset toilet."
-    },
-    {
-      "code": "FB2",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove the form boards/stakes from the subarea and dispose of it. If found to be impractical to remove the form boards/stakes, treat the embedded wood with (TIM-BOR) an approved fungicide, in accordance with the manufacturer's label."
-    },
-    {
-      "code": "PL2",
-      "text": "RECOMMENDATION - Owner and/or contractor to repair leak to correct the excessive moisture condition."
-    },
-    {
-      "code": "2IA",
-      "text": "RECOMMENDATION - Should any further information be desired, owner to remove storage to make ______ accessible to perform further inspection."
-    },
-    {
-      "code": "LP2",
-      "text": "RECOMMENDATION - Owner and/or contractor to repair leak to correct the excessive moisture condition."
-    },
-    {
-      "code": "DS2",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to install 6 mil or thicker plastic moisture barrier to help control this excessive moisture condition."
-    },
-    {
-      "code": "EP2",
-      "text": "RECOMMENDATION - Owner is advised to keep exterior painted and sealed as part of normal household maintenance."
-    },
-    {
-      "code": "BV2",
-      "text": "RECOMMENDATION - Owner is advised to remove and replace broken vent with new wire mesh."
-    },
-    {
-      "code": "1MB",
-      "text": "RECOMMENDATION - Install a 6 mil vapor barrier throughout the accessible areas of the substructure to help control the excessive moisture condition."
-    },
-    {
-      "code": "2SES",
-      "text": "RECOMMENDATION - This home was constructed without the use of a vapor seed at the base of the subarea. Although this was an accepted construction method, it does create an area that can also allow subterranean termites to access the home without being detected. This area can also allow condensation to build up and not drain properly. There is no evidence of any adverse condition at this time, however if further information is desired it will be necessary to install sensors to allow for further inspection. Findings/recommendations will be included in a supplemental report."
-    },
-    {
-      "code": "1LCKD",
-      "text": "RECOMMENDATION - Owner and/or licensed contractor to remove and replace accessible termite damaged wood with new materials. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
-    },
-    {
-      "code": "SC2",
-      "text": "RECOMMENDATION - Owner is advised to keep these cracks well sealed and maintained as general home maintenance."
-    },
-    {
-      "code": "VC2",
-      "text": "RECOMMENDATION - The owner is advised to trim back the vegetation/plants that is in contact with the structure as general home maintenance."
-    },
-    {
-      "code": "2SW",
-      "text": "RECOMMENDATION - When drier conditions exist, the owner is to call for further inspection. Upon inspection, a supplemental report will be issued and any findings will be listed along with estimates for repairs."
-    },
-    {
-      "code": "1DF",
-      "text": "RECOMMENDATION - Hollow out this area and fill the void with a wood filler. **Paint to match** NOTE - Once we start repairs, if we find any additional issues, we will notify you immediately with findings, recommendations, and costs. We will also issue a supplemental report."
-    },
-    {
-      "code": "1FUME",
-      "text": "RECOMMENDATION - Vacate premises and seal structure. Fumigate with lethal gas (VIKANE/SULFURYL FLUORIDE) then remove the seals and air out building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. The fumigation is a 3-day/2-night process and property must be vacated during the fumigation (add 1 day/1 night if scheduling over a weekend)."
-    },
-    {
-      "code": "ITDR",
-      "text": "RECOMMENDATION - Remove the termite damaged and replace/repair with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids."
-    },
-    {
-      "code": "2BG",
-      "text": "RECOMMENDATION - Owner advises to engage the services of a licensed contractor to inspect gutters/downspouts and to perform any corrective work needed."
-    },
-    {
-      "code": "DS3",
-      "text": "RECOMMENDATION - The owner should have periodic inspections of this area. If additional information is requested and appropriate tradesperson should be contacted."
-    },
-    {
-      "code": "CON1",
-      "text": "RECOMMENDATION - The owner is advised to keep these walls sealed and maintained. If additional information is requested, a proper contractor should be contacted."
-    },
-    {
-      "code": "1FI",
-      "text": "RECOMMENDATION - Further inspection: Upon request we will return to the property once this area has been made accessible and issue a supplemental report upon inspection with any findings."
-    },
-    {
-      "code": "1FDRGD",
-      "text": "RECOMMENDATION - Remove the existing and install the prehung door. Install new hardware and trim."
-    },
-    {
-      "code": "2SCD",
-      "text": "RECOMMENDATION - The owner is advised to keep this area under close observation to determine if any corrective repairs are necessary in the future."
-    },
-    {
-      "code": "DF2",
-      "text": "RECOMMENDATION - Hollow out this area and fill the void with a wood filler. **Paint to match**"
-    },
-    {
-      "code": "ITD",
-      "text": "RECOMMENDATION - Remove the termite damaged , resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids."
-    },
-    {
-      "code": "2SPE",
-      "text": "RECOMMENDATION - Since there is past termite activity, we advise the owner to have periodic inspections as general maintenance."
-    },
-    {
-      "code": "2GAP",
-      "text": "RECOMMENDATION - Owner is advised to seal the gap in the most practical way to prevent moisture entry into this area."
-    },
-    {
-      "code": "2SWOLLEN",
-      "text": "RECOMMENDATION - Owner to remove damaged sheetrock to make framing accessible to termite for further inspection."
-    },
-    {
-      "code": "LC1",
-      "text": "RECOMMENDATION - The owner should engage the services of a licensed contractor to make any necessary repairs."
-    },
-    {
-      "code": "OA1",
-      "text": "RECOMMENDATION - The owner is advised to keep these area(s) under observation to determine if and when corrective actions become necessary."
-    },
-    {
-      "code": "2MF",
-      "text": "RECOMMENDATION - We will attempt to chisel out the damage and treat the adjacent area with TIM-BOR per label instructions. If the damage extends beyond the accessible area a supplemental report will be issued."
-    },
-    {
-      "code": "2STAKE",
-      "text": "RECOMMENDATION - Remove the form boards/stakes from the subarea and dispose of. If it is found to be impractical to remove the boards/stakes, treat the embedded wood with (TIMBOR) an approved fungicide, in accordance with the manufacturers label."
-    },
-    {
-      "code": "2OLDK",
-      "text": "RECOMMENDATION - Interested parties to contact company who preformed the fumigation for clean up or removal."
-    },
-    {
-      "code": "T3",
-      "text": "RECOMMENDATION - Owner is advised to secure the toilet bolt however, taking caution not to over tighten."
-    },
-    {
-      "code": "SES3",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL recommends periodic inspections. If additional information is requested an appropriate tradesperson should be contacted."
-    },
-    {
-      "code": "PL3",
-      "text": "RECOMMENDATION - Owner and/or contractor advised to repair the leak in the most practical way."
-    },
-    {
-      "code": "2IAH",
-      "text": "RECOMMENDATION - Further inspection: We will quote the cost of further inspection by returning to the property with an extension ladder in order to probe these areas if requested by the owner."
-    },
-    {
-      "code": "1CFB",
-      "text": "RECOMMENDATION - Remove the false bottom for further inspection. If no further issues are found, replace wood as necessary. If additional damage is found, a supplemental report will be issued."
-    },
-    {
-      "code": "2WS",
-      "text": "RECOMMENDATION - Cut back and/or remove wood scored(s) to break contact with structure."
-    },
-    {
-      "code": "1SST",
-      "text": "RECOMMENDATION - Drill through the concrete at the area indicated by _ on the diagram. Pressure inject the soil with TERMIDOR (per label instructions). Holes in the concrete will be patched with mortar. *THIS IS A LOCAL TREATMENT METHOD. WE ONLY GUARANTEE THE AREAS TREATED.*"
-    },
-    {
-      "code": "3PL",
-      "text": "RECOMMENDATION - The owner is advised to contact a plumbing contractor to inspect and make any necessary repairs."
-    },
-    {
-      "code": "2SH",
-      "text": "RECOMMENDATION - The owner is advised to keep this area well sealed and maintained as general maintenance."
-    },
-    {
-      "code": "1SSW",
-      "text": "RECOMMENDATION - Trench and treat the exterior soil adjacent to this wall with TERMIDOR (per label instructions); this must be performed by a licensed applicator."
-    },
-    {
-      "code": "2SIG",
-      "text": "RECOMMENDATION - Owner to have all storage removed from the foundation walls prior to treatment. Drill holes through the concrete and inject TERMIDOR (per label instructions) for the control of this infestation. This is a local treatment method."
-    },
-    {
-      "code": "2SPT",
-      "text": "RECOMMENDATION - Per customer request, as a preventative treatment, TOP GRADE TERMITE CONTROL to treat the exterior soil, and subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of this termite. Any holes made in the concrete will be filled with mortar."
-    },
-    {
-      "code": "2FG",
-      "text": "RECOMMENDATION - Grade the earth in this area to maintain an earth level below the top of the foundation and to provide proper drainage away from the structure."
-    },
-    {
-      "code": "2WSE",
-      "text": "RECOMMENDATION - The owner is advised to keep this area under close observation to determine if any corrective repairs are necessary in the future."
-    },
-    {
-      "code": "2IAV",
-      "text": "RECOMMENDATION - Periodic inspections."
-    },
-    {
-      "code": "2GSD",
-      "text": "RECOMMENDATION - The owner is advised to keep this door well sealed and maintained as general maintenance."
-    },
-    {
-      "code": "PLC",
-      "text": "RECOMMENDATION - Owner is advised to contact appropriate tradesperson to repair leak."
-    },
-    {
-      "code": "3OLDK",
-      "text": "RECOMMENDATION - Remove or mask over all accessible termite pellets and after 30 to 45 days, the owner or interested parties is to call for further inspection of this area for evidence of activity. Upon further inspection, we will issue a supplemental report with any findings, recommendation and bids."
-    },
-    {
-      "code": "CWS2",
-      "text": "RECOMMENDATION - Cut back and/or remove _ away from structure."
-    },
-    {
-      "code": "2EWC",
-      "text": "RECOMMENDATION - Re-grade the soil level to break the earth wood contact."
-    },
-    {
-      "code": "2SC",
-      "text": "RECOMMENDATION - Owner is advised to keep these cracks well sealed and maintained as general home maintenance."
-    },
-    {
-      "code": "DW12",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to treat the entire infested area with TERMIDOR(FIPRONIL) by injecting it into the termite colony after the moisture source that is contributing to the infestation has been corrected. Area must be vacated at the time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included), after the moisture source that is contributing to the infestation has been corrected."
-    },
-    {
-      "code": "SD1",
-      "text": "RECOMMENDATION - Remove the subterranean termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids. Paint to match."
-    },
-    {
-      "code": "SH2",
-      "text": "RECOMMENDATION - The owner is advised to keep this area well sealed and maintained as general home maintenance."
-    },
-    {
-      "code": "DAMP2",
-      "text": "RECOMMENDATION - Locally treat for the control of dampwood termites after the moisture source that is contributing to the infestation has been corrected. TOP GRADE TERMITE CONTROL to treat the infested area with TERMIDOR(FIPRONIL) by injecting it into the termite colony. Cover and/or remove old evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included). This is a local treatment method only. We only guarantee the areas treated."
-    },
-    {
-      "code": "NW2",
-      "text": "RECOMMENDATION - Further inspection. Upon request once water is turned back on we will return to inspect the areas that are normally water tested and issue a supplemental report with any findings, recommendations and bids."
-    },
-    {
-      "code": "2MT",
-      "text": "RECOMMENDATION - Owner/agent is advised to engage the services of a licensed contractor to remove cracked tile and/or loose grout and replace with new materials to seal this area. TOP GRADE TERMITE CONTROL is not responsible for the work of others."
-    },
-    {
-      "code": "2SD",
-      "text": "RECOMMENDATION - Remove the subterranean termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids."
-    },
-    {
-      "code": "2PLU",
-      "text": "RECOMMENDATION - Owner and/or contractor to repair leak in most practical way."
-    },
-    {
-      "code": "PLU2",
-      "text": "RECOMMENDATION - Owner and/or contractor to repair leak in most practical way."
-    },
-    {
-      "code": "1LCSD",
-      "text": "RECOMMENDATION - Owner and/or licensed contractor to remove and replace accessible termite damaged wood with new materials. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
-    },
-    {
-      "code": "3WSE",
-      "text": "RECOMMENDATION - Owner/agent should engage the services of a licensed roofing contractor to inspect and make any necessary repairs to the roof coating systems to correct the adverse moisture condition."
-    },
-    {
-      "code": "2C",
-      "text": "RECOMMENDATION - Owner advise to engage the services of a licensed contractor to inspect corroded line end to perform any corrective work needed."
-    },
-    {
-      "code": "1PI",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL recommends periodic inspections."
-    },
-    {
-      "code": "2CSP",
-      "text": "RECOMMENDATION - Owner advise to engage the services of a licensed contractor to inspect shower pan and to perform any corrective work needed."
-    },
-    {
-      "code": "2LV",
-      "text": "RECOMMENDATION - Install additional vents at the area indicated on the diagram to increase air flow."
-    },
-    {
-      "code": "2AEWC",
-      "text": "RECOMMENDATION - Separate the _ from the structure by installing metal flashing between the _ and structure."
-    },
-    {
-      "code": "2DHF",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged portion of the hardwood floor. Replace with new material as necessary. We will attempt to match the hardwood floor as close as possible. There are certain flooring products that are not available and a similar flooring will be used."
-    },
-    {
-      "code": "2WBBD",
-      "text": "RECOMMENDATION - Remove the wood boring beetle damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids."
-    },
-    {
-      "code": "FDRFR2",
-      "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the fungus damaged _ with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids. *Top Grade Termite Control to subcontract the appropriate trades person to reseal flat roof at areas repaired by this company."
-    },
-    {
-      "code": "2EWCF",
-      "text": "RECOMMENDATION - Separate the _ by installing a metal flashing between the _ and structure."
-    },
-    {
-      "code": "2CBF",
-      "text": "RECOMMENDATION - Cut off base of _ and install a concrete or masonry pad to break any earth wood contact."
-    },
-    {
-      "code": "2UNWT",
-      "text": "RECOMMENDATION - The owner to keep this shower well sealed and maintained."
-    },
-    {
-      "code": "2CT",
-      "text": "RECOMMENDATION - Owner/agent is advised to engage the services of a licensed contractor to remove cracked tile and/or loose grout and replace with new materials to seal this area. TOP GRADE TERMITE CONTROL is not responsible for the work of others."
-    }
-  ]
+  {
+    "code": "1TSS",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to knock down the tubes and treat the subarea soil with TERMIDOR (FIPRONIL) for the control of termites. Area must be vacated at the time of application."
+  },
+  {
+    "code": "1TSE",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to rod and treat the exterior soil with TERMIDOR (FIPRONIL) for the control of termites. Any holes drilled in the concrete will be patched with mortar."
+  },
+  {
+    "code": "1TSG",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to drill through the interior garage concrete and inject TERMIDOR (FIPRONIL). NOTE* This is a local treatment method."
+  },
+  {
+    "code": "1SFT",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to knock down mud tubes and treat the exterior soil, exterior concrete, and subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of termites. Any holes made in the concrete will be filled with mortar."
+  },
+  {
+    "code": "3CD",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove cellulose debris of rakeable size from the subarea and dispose of (wood, paper products)."
+  },
+  {
+    "code": "4CD",
+    "text": "RECOMMENDATION - Owner to remove cellulose debris from the subarea."
+  },
+  {
+    "code": "2KIA",
+    "text": "RECOMMENDATION/PRIMARY - Vacate premises and seal structure. Fumigate with lethal gas (SULFURYL FLUORIDE), remove the seals, and air out the building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. SECONDARY/SUB-STANDARD - TOP GRADE TERMITE CONTROL to treat the entire infested area with TERMIDOR (FIPRONIL) by injecting it into the termite colony. Cover and/or remove evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included)."
+  },
+  {
+    "code": "1CDS",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove infested cellulose debris and treat subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of termites."
+  },
+  {
+    "code": "1LCFD",
+    "text": "RECOMMENDATION - Owner and/or licensed contractor to correct fungus condition and/or remove and replace accessible fungus and dry rot damaged wood and/or materials, treat area with state registered fungicide, and prime and paint area for protection. TOP GRADE TERMITE CONTROL is not recommended for this task."
+  },
+  {
+    "code": "2SF",
+    "text": "RECOMMENDATION - Owner and/or licensed contractor to correct surface fungus condition and/or remove surface fungus with a wire brush and treat area with state registered fungicide to correct. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
+  },
+  {
+    "code": "1SFW",
+    "text": "RECOMMENDATION - Wire brush and treat infected wood members with (TIMBOR) a registered fungicide in accordance with the manufacturer's label. This must be performed by a licensed chemical applicator."
+  },
+  {
+    "code": "1TGR",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL repair."
+  },
+  {
+    "code": "1TGRR",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to repair. If additional damage is found to extend into inaccessible areas, TOP GRADE TERMITE CONTROL will issue a supplemental report with any additional findings, recommendations, and bids."
+  },
+  {
+    "code": "2WBB",
+    "text": "RECOMMENDATION/PRIMARY - Vacate premises and seal structure. Fumigate with lethal gas (SULFURYL FLUORIDE), remove the seals, and air out the building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. SECONDARY/SUB-STANDARD - TOP GRADE TERMITE CONTROL to treat the entire infested area with BORA-CARE by injecting it into the beetle colony. Cover and/or remove evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included)."
+  },
+  {
+    "code": "1SMR",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged shingle molding as necessary. The bid includes repairing the roof covering where disturbed by repairs."
+  },
+  {
+    "code": "FDR2",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged portion of the siding. Replace with new material as necessary. We will attempt to match the siding as close as possible. There are certain siding products that are not available and a similar siding will be used. Paint to match as close as possible."
+  },
+  {
+    "code": "KD1",
+    "text": "RECOMMENDATION - Remove the drywood termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids. Paint to match."
+  },
+  {
+    "code": "FDR3",
+    "text": "RECOMMENDATION - Remove and replace the fungus damaged wood members noted at the _______ with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings."
+  },
+  {
+    "code": "ZER02",
+    "text": "RECOMMENDATION - Upon request we will return to the property once this area has been made accessible by others. Issue a supplemental report upon inspection."
+  },
+  {
+    "code": "WBB3",
+    "text": "RECOMMENDATION - Beetle damage appears minor and wood member does not appear to be structurally weakened. No recommendation for repair at this time. Periodic inspection advised."
+  },
+  {
+    "code": "FDR4",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the fungus damaged wood with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids. Paint to match included."
+  },
+  {
+    "code": "T2",
+    "text": "RECOMMENDATION - Owner and/or licensed contractor to remove the toilet and replace the wax seal with new wax seal. Reset toilet."
+  },
+  {
+    "code": "FB2",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove the form boards/stakes from the subarea and dispose of it. If found to be impractical to remove the form boards/stakes, treat the embedded wood with (TIM-BOR) an approved fungicide, in accordance with the manufacturer's label."
+  },
+  {
+    "code": "PL2",
+    "text": "RECOMMENDATION - Owner and/or contractor to repair leak to correct the excessive moisture condition."
+  },
+  {
+    "code": "2IA",
+    "text": "RECOMMENDATION - Should any further information be desired, owner to remove storage to make ______ accessible to perform further inspection."
+  },
+  {
+    "code": "LP2",
+    "text": "RECOMMENDATION - Owner and/or contractor to repair leak to correct the excessive moisture condition."
+  },
+  {
+    "code": "DS2",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to install 6 mil or thicker plastic moisture barrier to help control this excessive moisture condition."
+  },
+  {
+    "code": "EP2",
+    "text": "RECOMMENDATION - Owner is advised to keep exterior painted and sealed as part of normal household maintenance."
+  },
+  {
+    "code": "BV2",
+    "text": "RECOMMENDATION - Owner is advised to remove and replace broken vent with new wire mesh."
+  },
+  {
+    "code": "1MB",
+    "text": "RECOMMENDATION - Install a 6 mil vapor barrier throughout the accessible areas of the substructure to help control the excessive moisture condition."
+  },
+  {
+    "code": "2SES",
+    "text": "RECOMMENDATION - This home was constructed without the use of a vapor seed at the base of the subarea. Although this was an accepted construction method, it does create an area that can also allow subterranean termites to access the home without being detected. This area can also allow condensation to build up and not drain properly. There is no evidence of any adverse condition at this time, however if further information is desired it will be necessary to install sensors to allow for further inspection. Findings/recommendations will be included in a supplemental report."
+  },
+  {
+    "code": "1LCKD",
+    "text": "RECOMMENDATION - Owner and/or licensed contractor to remove and replace accessible termite damaged wood with new materials. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
+  },
+  {
+    "code": "SC2",
+    "text": "RECOMMENDATION - Owner is advised to keep these cracks well sealed and maintained as general home maintenance."
+  },
+  {
+    "code": "VC2",
+    "text": "RECOMMENDATION - The owner is advised to trim back the vegetation/plants that is in contact with the structure as general home maintenance."
+  },
+  {
+    "code": "2SW",
+    "text": "RECOMMENDATION - When drier conditions exist, the owner is to call for further inspection. Upon inspection, a supplemental report will be issued and any findings will be listed along with estimates for repairs."
+  },
+  {
+    "code": "1DF",
+    "text": "RECOMMENDATION - Hollow out this area and fill the void with a wood filler. **Paint to match** NOTE - Once we start repairs, if we find any additional issues, we will notify you immediately with findings, recommendations, and costs. We will also issue a supplemental report."
+  },
+  {
+    "code": "1FUME",
+    "text": "RECOMMENDATION - Vacate premises and seal structure. Fumigate with lethal gas (VIKANE/SULFURYL FLUORIDE) then remove the seals and air out building. Make ready for occupancy. Cover and/or remove old evidence. Area must be vacated at time of application. The fumigation is a 3-day/2-night process and property must be vacated during the fumigation (add 1 day/1 night if scheduling over a weekend)."
+  },
+  {
+    "code": "ITDR",
+    "text": "RECOMMENDATION - Remove the termite damaged and replace/repair with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids."
+  },
+  {
+    "code": "2BG",
+    "text": "RECOMMENDATION - Owner advises to engage the services of a licensed contractor to inspect gutters/downspouts and to perform any corrective work needed."
+  },
+  {
+    "code": "DS3",
+    "text": "RECOMMENDATION - The owner should have periodic inspections of this area. If additional information is requested and appropriate tradesperson should be contacted."
+  },
+  {
+    "code": "CON1",
+    "text": "RECOMMENDATION - The owner is advised to keep these walls sealed and maintained. If additional information is requested, a proper contractor should be contacted."
+  },
+  {
+    "code": "1FI",
+    "text": "RECOMMENDATION - Further inspection: Upon request we will return to the property once this area has been made accessible and issue a supplemental report upon inspection with any findings."
+  },
+  {
+    "code": "1FDRGD",
+    "text": "RECOMMENDATION - Remove the existing and install the prehung door. Install new hardware and trim."
+  },
+  {
+    "code": "2SCD",
+    "text": "RECOMMENDATION - The owner is advised to keep this area under close observation to determine if any corrective repairs are necessary in the future."
+  },
+  {
+    "code": "DF2",
+    "text": "RECOMMENDATION - Hollow out this area and fill the void with a wood filler. **Paint to match**"
+  },
+  {
+    "code": "ITD",
+    "text": "RECOMMENDATION - Remove the termite damaged , resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any findings, recommendations, and bids."
+  },
+  {
+    "code": "2SPE",
+    "text": "RECOMMENDATION - Since there is past termite activity, we advise the owner to have periodic inspections as general maintenance."
+  },
+  {
+    "code": "2GAP",
+    "text": "RECOMMENDATION - Owner is advised to seal the gap in the most practical way to prevent moisture entry into this area."
+  },
+  {
+    "code": "2SWOLLEN",
+    "text": "RECOMMENDATION - Owner to remove damaged sheetrock to make framing accessible to termite for further inspection."
+  },
+  {
+    "code": "LC1",
+    "text": "RECOMMENDATION - The owner should engage the services of a licensed contractor to make any necessary repairs."
+  },
+  {
+    "code": "OA1",
+    "text": "RECOMMENDATION - The owner is advised to keep these area(s) under observation to determine if and when corrective actions become necessary."
+  },
+  {
+    "code": "2MF",
+    "text": "RECOMMENDATION - We will attempt to chisel out the damage and treat the adjacent area with TIM-BOR per label instructions. If the damage extends beyond the accessible area a supplemental report will be issued."
+  },
+  {
+    "code": "2STAKE",
+    "text": "RECOMMENDATION - Remove the form boards/stakes from the subarea and dispose of. If it is found to be impractical to remove the boards/stakes, treat the embedded wood with (TIMBOR) an approved fungicide, in accordance with the manufacturers label."
+  },
+  {
+    "code": "2OLDK",
+    "text": "RECOMMENDATION - Interested parties to contact company who preformed the fumigation for clean up or removal."
+  },
+  {
+    "code": "T3",
+    "text": "RECOMMENDATION - Owner is advised to secure the toilet bolt however, taking caution not to over tighten."
+  },
+  {
+    "code": "SES3",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL recommends periodic inspections. If additional information is requested an appropriate tradesperson should be contacted."
+  },
+  {
+    "code": "PL3",
+    "text": "RECOMMENDATION - Owner and/or contractor advised to repair the leak in the most practical way."
+  },
+  {
+    "code": "2IAH",
+    "text": "RECOMMENDATION - Further inspection: We will quote the cost of further inspection by returning to the property with an extension ladder in order to probe these areas if requested by the owner."
+  },
+  {
+    "code": "1CFB",
+    "text": "RECOMMENDATION - Remove the false bottom for further inspection. If no further issues are found, replace wood as necessary. If additional damage is found, a supplemental report will be issued."
+  },
+  {
+    "code": "2WS",
+    "text": "RECOMMENDATION - Cut back and/or remove wood scored(s) to break contact with structure."
+  },
+  {
+    "code": "1SST",
+    "text": "RECOMMENDATION - Drill through the concrete at the area indicated by _ on the diagram. Pressure inject the soil with TERMIDOR (per label instructions). Holes in the concrete will be patched with mortar. *THIS IS A LOCAL TREATMENT METHOD. WE ONLY GUARANTEE THE AREAS TREATED.*"
+  },
+  {
+    "code": "3PL",
+    "text": "RECOMMENDATION - The owner is advised to contact a plumbing contractor to inspect and make any necessary repairs."
+  },
+  {
+    "code": "2SH",
+    "text": "RECOMMENDATION - The owner is advised to keep this area well sealed and maintained as general maintenance."
+  },
+  {
+    "code": "1SSW",
+    "text": "RECOMMENDATION - Trench and treat the exterior soil adjacent to this wall with TERMIDOR (per label instructions); this must be performed by a licensed applicator."
+  },
+  {
+    "code": "2SIG",
+    "text": "RECOMMENDATION - Owner to have all storage removed from the foundation walls prior to treatment. Drill holes through the concrete and inject TERMIDOR (per label instructions) for the control of this infestation. This is a local treatment method."
+  },
+  {
+    "code": "2SPT",
+    "text": "RECOMMENDATION - Per customer request, as a preventative treatment, TOP GRADE TERMITE CONTROL to treat the exterior soil, and subarea soil with TERMIDOR (FIPRONIL) per label instructions for the control of this termite. Any holes made in the concrete will be filled with mortar."
+  },
+  {
+    "code": "2FG",
+    "text": "RECOMMENDATION - Grade the earth in this area to maintain an earth level below the top of the foundation and to provide proper drainage away from the structure."
+  },
+  {
+    "code": "2WSE",
+    "text": "RECOMMENDATION - The owner is advised to keep this area under close observation to determine if any corrective repairs are necessary in the future."
+  },
+  {
+    "code": "2IAV",
+    "text": "RECOMMENDATION - Periodic inspections."
+  },
+  {
+    "code": "2GSD",
+    "text": "RECOMMENDATION - The owner is advised to keep this door well sealed and maintained as general maintenance."
+  },
+  {
+    "code": "PLC",
+    "text": "RECOMMENDATION - Owner is advised to contact appropriate tradesperson to repair leak."
+  },
+  {
+    "code": "3OLDK",
+    "text": "RECOMMENDATION - Remove or mask over all accessible termite pellets and after 30 to 45 days, the owner or interested parties is to call for further inspection of this area for evidence of activity. Upon further inspection, we will issue a supplemental report with any findings, recommendation and bids."
+  },
+  {
+    "code": "CWS2",
+    "text": "RECOMMENDATION - Cut back and/or remove _ away from structure."
+  },
+  {
+    "code": "2EWC",
+    "text": "RECOMMENDATION - Re-grade the soil level to break the earth wood contact."
+  },
+  {
+    "code": "2SC",
+    "text": "RECOMMENDATION - Owner is advised to keep these cracks well sealed and maintained as general home maintenance."
+  },
+  {
+    "code": "DW12",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to treat the entire infested area with TERMIDOR(FIPRONIL) by injecting it into the termite colony after the moisture source that is contributing to the infestation has been corrected. Area must be vacated at the time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included), after the moisture source that is contributing to the infestation has been corrected."
+  },
+  {
+    "code": "SD1",
+    "text": "RECOMMENDATION - Remove the subterranean termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids. Paint to match."
+  },
+  {
+    "code": "SH2",
+    "text": "RECOMMENDATION - The owner is advised to keep this area well sealed and maintained as general home maintenance."
+  },
+  {
+    "code": "DAMP2",
+    "text": "RECOMMENDATION - Locally treat for the control of dampwood termites after the moisture source that is contributing to the infestation has been corrected. TOP GRADE TERMITE CONTROL to treat the infested area with TERMIDOR(FIPRONIL) by injecting it into the termite colony. Cover and/or remove old evidence. Area must be vacated at time of application. TOP GRADE TERMITE CONTROL will patch holes (painting not included). This is a local treatment method only. We only guarantee the areas treated."
+  },
+  {
+    "code": "NW2",
+    "text": "RECOMMENDATION - Further inspection. Upon request once water is turned back on we will return to inspect the areas that are normally water tested and issue a supplemental report with any findings, recommendations and bids."
+  },
+  {
+    "code": "2MT",
+    "text": "RECOMMENDATION - Owner/agent is advised to engage the services of a licensed contractor to remove cracked tile and/or loose grout and replace with new materials to seal this area. TOP GRADE TERMITE CONTROL is not responsible for the work of others."
+  },
+  {
+    "code": "2SD",
+    "text": "RECOMMENDATION - Remove the subterranean termite damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids."
+  },
+  {
+    "code": "2PLU",
+    "text": "RECOMMENDATION - Owner and/or contractor to repair leak in most practical way."
+  },
+  {
+    "code": "PLU2",
+    "text": "RECOMMENDATION - Owner and/or contractor to repair leak in most practical way."
+  },
+  {
+    "code": "1LCSD",
+    "text": "RECOMMENDATION - Owner and/or licensed contractor to remove and replace accessible termite damaged wood with new materials. TOP GRADE TERMITE CONTROL is not responsible for work performed by others."
+  },
+  {
+    "code": "3WSE",
+    "text": "RECOMMENDATION - Owner/agent should engage the services of a licensed roofing contractor to inspect and make any necessary repairs to the roof coating systems to correct the adverse moisture condition."
+  },
+  {
+    "code": "2C",
+    "text": "RECOMMENDATION - Owner advise to engage the services of a licensed contractor to inspect corroded line end to perform any corrective work needed."
+  },
+  {
+    "code": "1PI",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL recommends periodic inspections."
+  },
+  {
+    "code": "2CSP",
+    "text": "RECOMMENDATION - Owner advise to engage the services of a licensed contractor to inspect shower pan and to perform any corrective work needed."
+  },
+  {
+    "code": "2LV",
+    "text": "RECOMMENDATION - Install additional vents at the area indicated on the diagram to increase air flow."
+  },
+  {
+    "code": "2AEWC",
+    "text": "RECOMMENDATION - Separate the _ from the structure by installing metal flashing between the _ and structure."
+  },
+  {
+    "code": "2DHF",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the damaged portion of the hardwood floor. Replace with new material as necessary. We will attempt to match the hardwood floor as close as possible. There are certain flooring products that are not available and a similar flooring will be used."
+  },
+  {
+    "code": "2WBBD",
+    "text": "RECOMMENDATION - Remove the wood boring beetle damaged, resupport/replace with new material as necessary. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids."
+  },
+  {
+    "code": "FDRFR2",
+    "text": "RECOMMENDATION - TOP GRADE TERMITE CONTROL to remove and replace the fungus damaged _ with new materials. If damage is found to extend into inaccessible areas, a supplemental report will be issued with any finding, recommendations, and bids. *Top Grade Termite Control to subcontract the appropriate trades person to reseal flat roof at areas repaired by this company."
+  },
+  {
+    "code": "2EWCF",
+    "text": "RECOMMENDATION - Separate the _ by installing a metal flashing between the _ and structure."
+  },
+  {
+    "code": "2CBF",
+    "text": "RECOMMENDATION - Cut off base of _ and install a concrete or masonry pad to break any earth wood contact."
+  },
+  {
+    "code": "2UNWT",
+    "text": "RECOMMENDATION - The owner to keep this shower well sealed and maintained."
+  },
+  {
+    "code": "2CT",
+    "text": "RECOMMENDATION - Owner/agent is advised to engage the services of a licensed contractor to remove cracked tile and/or loose grout and replace with new materials to seal this area. TOP GRADE TERMITE CONTROL is not responsible for the work of others."
+  }
+]
