@@ -9,7 +9,8 @@ export default function Nav() {
         <div className="navbar-end">
             <a href= "/" className="navbar-item">Home</a>
             <a href="/jobs" className="navbar-item">Jobs</a>
-            <a className="navbar-item">CodeBook</a>
+            <a href="/findings" className="navbar-item">Findings</a>
+            <a href="/recommendations" className="navbar-item">Recommendations</a>
         </div>
     </div>
     )

@@ -34,7 +34,7 @@ export default function Jobs() {
   console.log('jobs: ',jobs)
 
   return (
-    <div className=''>
+    <div>
       <Nav />
       <div className="flex-col w-screen border-red-600 border-2">
         <h3 className="text-blue-500 text-3xl m-10">Your Jobs</h3>
