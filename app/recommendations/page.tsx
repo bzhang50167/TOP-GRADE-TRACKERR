@@ -14,7 +14,7 @@ export default function Recommendations() {
         <div className="flex justify-center">
           <input
             type="text"
-            placeholder="search"
+            placeholder="search recommendations"
             className="bg-white border-2 p-2 rounded border-slate-500"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

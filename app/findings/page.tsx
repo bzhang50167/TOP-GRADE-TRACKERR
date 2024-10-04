@@ -13,6 +13,7 @@ export default function Findings() {
         <div className="flex justify-center">
           <input
             type="text"
+            placeholder="search findings"
             className="bg-white border-2 p-2 rounded border-slate-500"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
