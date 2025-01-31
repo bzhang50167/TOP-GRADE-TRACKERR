@@ -1,0 +1,118 @@
+[
+    {
+        "part": "single shiplap board 8 inches or smaller",
+        "price": 150
+    },
+    {
+        "part": "single shiplap board 10 inches or wider",
+        "price": 250
+    },
+    {
+        "part": "siding sheet 8 inches or smaller",
+        "price": 950
+    },
+    {
+        "part": "siding sheet 10 inches or wider",
+        "price": 1300
+    },
+    {
+        "part": "rafter tail 2x4 (1 story)",
+        "price": 250
+    },
+    {
+        "part": "rafter tail 2x4 (2 story)",
+        "price": 350
+    },
+    {
+        "part": "rafter tail 2x6 (1 story)",
+        "price": 300
+    },
+    {
+        "part": "rafter tail 2x6 (2 story)",
+        "price": 400
+    },
+    {
+        "part": "window trims",
+        "price": 300
+    },
+    {
+        "part": "door trims",
+        "price": 400
+    },
+    {
+        "part": "siding trim",
+        "price": 600
+    },
+    {
+        "part": "regular entry door",
+        "price": 950
+    },
+    {
+        "part": "garage main door jamb",
+        "price": 1300
+    },
+    {
+        "part": "fascia board (1 story, no gutter removal)",
+        "price": 450
+    },
+    {
+        "part": "fascia board (1 story, with gutter removal)",
+        "price": 800
+    },
+    {
+        "part": "barge rafter full (1 story)",
+        "price": 1300
+    },
+    {
+        "part": "barge rafter full (2 story)",
+        "price": 1700
+    },
+    {
+        "part": "barge rafter end (1 story)",
+        "price": 700
+    },
+    {
+        "part": "barge rafter end (2 story)",
+        "price": 850
+    },
+    {
+        "part": "stucco molding",
+        "price": "varies"
+    },
+    {
+        "part": "vapor barrier",
+        "price": "based on sqft and accessibility"
+    },
+    {
+        "part":"support post 4x4 8ft regular pir post",
+        "price":450
+    },
+    {
+        "part":"support post 4x6 8ft regular pir post",
+        "price":550
+    },
+    {
+        "part":"subfloor(per section)",
+        "price": 850
+    },
+    {
+        "part":"rim joist",
+        "price":650
+    },
+    {
+        "part":"mudsil (single)",
+        "price": 650
+    },
+    {
+        "part":"mudsil (from vent to vent)",
+        "price":1300
+    },
+    {
+        "part":"floor joist 2x6",
+        "price":900
+    },
+    {
+        "part":"floor joist 2x8",
+        "price":1000
+    }
+]
