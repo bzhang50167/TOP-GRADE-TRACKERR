@@ -9,7 +9,6 @@ export default function Recommendations() {
 
   return (
     <div>
-      <Nav />
       <div className="table-container p-8">
         <div className="flex justify-center">
           <input

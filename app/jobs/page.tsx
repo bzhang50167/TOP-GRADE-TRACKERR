@@ -35,7 +35,6 @@ export default function Jobs() {
 
   return (
     <div>
-      <Nav />
       <div className="flex-col w-screen border-red-600 border-2">
         <h3 className="text-blue-500 text-3xl m-10">Your Jobs</h3>
         <label className="btn btn-primary" htmlFor="modal-1">Add New Job</label>

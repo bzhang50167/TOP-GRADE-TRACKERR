@@ -24,10 +24,26 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  height: 100vh;
+  width: 100vw;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar {
+  padding: 20px 30px;
+}
+
+fieldset > div > input {
+  background-color: white;
+  border: 1px solid black;
 }
