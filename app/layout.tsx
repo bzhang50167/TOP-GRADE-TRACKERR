@@ -1,7 +1,7 @@
 // "use client";
 
 import React from "react";
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -33,6 +33,9 @@ export default function RootLayout({
         <Nav />
         {/* <SessionProvider>{children}</SessionProvider> */}
         {children}
+        <footer>
+        <p>&copy; 2025 Top Grade Tracker. All rights reserved.</p>
+      </footer>
       </body>
     </html>
   );
