@@ -48,9 +48,7 @@ fieldset > div > input {
   border: 1px solid black;
 }
 
-main {
-  height: calc(100vh - 90px - 24px); /*100vh - navbar height - footer height located in layout*/
-}
+/* main {  height: calc(100vh - 90px - 38px); 100vh - navbar height - footer height located in layout} */
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; /* Optional: Set a common font weight */

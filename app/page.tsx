@@ -1,7 +1,7 @@
 // "use client";
 
 import HomepageCarousel from "./components/homepageCarousel";
-
+import CopyrightFooter from "./components/copyrightFooter";
 // import { useSession, signIn, signOut } from "next-auth/react";
 // import { useRouter } from "next/navigation";
 
@@ -36,9 +36,11 @@ export default function Home() {
   //   </div>
   // );
 
+  const testimonialCardStyle = "flex flex-col h-[100px] w-[200px] border-2 border-black items-center";
+
   return (
-    <>
-      <main className="flex flex-col w-full justify-start items-center border-3 border-black overflow-auto">
+    <div className="flex flex-col h-[calc(100vh-110px)] overflow-auto" >
+      <main className="flex flex-col w-full justify-start items-center gap-6">
         <section
           id="hero"
           className="flex flex-col w-[75vw] items-center mt-[24px]"
@@ -58,10 +60,10 @@ export default function Home() {
         <section id="features">
           <h2 className="text-h2">Features</h2>
           <ul>
-            <li>Lorem ipsum odor amet, consectetuer adipiscing elit.</li>
+            <li className="text-xl">Lorem ipsum odor amet, consectetuer adipiscing elit.</li>
             <li>Litora luctus commodo aliquam consequat mus turpis.</li>
             <li>
-              Vitae inceptos ligula ad iaculis semper ante tortor faucibus.{" "}
+              Vitae inceptos ligula ad iaculis semper ante tortor faucibus.
             </li>
           </ul>
         </section>
@@ -69,21 +71,22 @@ export default function Home() {
         <section id="testimonials" className="flex flex-col items-center">
           <h2 className="text-h2">What Our Customers Say</h2>
           <article className="flex gap-14">
-            <div>
+            <div  className={testimonialCardStyle}>
               <blockquote>&quot;This product changed my life!&quot;</blockquote>
               <p>- Happy Customer</p>
             </div>
-            <div>
+            <div  className={testimonialCardStyle}>
               <blockquote>&quot;This product changed my life!&quot;</blockquote>
               <p>- Happy Customer</p>
             </div>
-            <div>
+            <div  className={testimonialCardStyle}>
               <blockquote>&quot;This product changed my life!&quot;</blockquote>
               <p>- Happy Customer</p>
             </div>
           </article>
         </section>
       </main>
-    </>
+      <CopyrightFooter />
+    </div>
   );
 }

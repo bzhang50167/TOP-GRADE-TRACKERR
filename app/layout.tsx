@@ -6,14 +6,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
-import type { Viewport } from 'next'
+import type { Viewport } from "next";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-}
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,9 +33,6 @@ export default function RootLayout({
         <Nav />
         {/* <SessionProvider>{children}</SessionProvider> */}
         {children}
-        <footer>
-        <p>&copy; 2025 Top Grade Tracker. All rights reserved.</p>
-      </footer>
       </body>
     </html>
   );
