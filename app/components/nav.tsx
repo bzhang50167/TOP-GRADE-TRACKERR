@@ -9,9 +9,22 @@ export default function Nav() {
   const user = { isWorker: false };
   // const user = { isWorker: true };
   // const user = false;
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
-  console.log("Session data: ", session)
+  if (status === "loading") {
+    return (
+      <div className="w-screen h-screen flex justify-center items-center flex-col gap-4">
+        <svg
+          className="spinner-ring spinner-xl"
+          viewBox="25 25 50 50"
+          strokeWidth="5"
+        >
+          <circle cx="50" cy="50" r="20" />
+        </svg>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   const renderNavLinks = () => {
     if (!session) {
