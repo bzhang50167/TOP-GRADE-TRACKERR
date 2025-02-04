@@ -1,19 +1,15 @@
+import { authOptions } from '@/lib/authOptions';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth';
-// import { authOptions } from '../auth/[...nextauth]/route';
+import { NextResponse } from 'next/server';
 
-// const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-//   const session = await getServerSession(req, res, authOptions);
-//   if (session) {
-//     res.send({
-//       content:
-//         "This is protected content. You can access this content because you are signed in.",
-//     });
-//   } else {
-//     res.send({
-//       error: "You must be signed in to view the protected content on this page.",
-//     });
-//   }
-// };
+export async function GET() {
+    const session = await getServerSession(authOptions);
 
-// export default handler;
+    if (!session) {
+        return NextResponse.json({ error: "Not Authorized"}, {status: 400 })
+    }
+
+    
+    return NextResponse.json({ success: session }, {status: 200 })
+}

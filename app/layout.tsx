@@ -1,12 +1,9 @@
-// "use client";
-
 import React from "react";
-// import { SessionProvider } from "next-auth/react";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
 import type { Viewport } from "next";
+import SessionWrapper from "./components/SessionWrapper";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -17,23 +14,19 @@ export const viewport: Viewport = {
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Top Grade Tracker",
-  description: "Application for Top Grade Tracker",
-};
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        {/* <SessionProvider>{children}</SessionProvider> */}
-        {children}
-      </body>
-    </html>
+    <SessionWrapper>
+      <html lang="en">
+        <body className={inter.className}>
+          <Nav />
+          {children}
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }

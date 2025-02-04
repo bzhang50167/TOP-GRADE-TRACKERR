@@ -1,16 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import logoPlaceHolder from "@/public/logo-placeholder.png";
+import { signIn, signOut, useSession } from "next-auth/react";
+
 
 export default function Nav() {
-  // const user = { isWorker: false };
+  const user = { isWorker: false };
   // const user = { isWorker: true };
-  const user = false;
+  // const user = false;
+  const { data: session } = useSession();
+
+  console.log("Session data: ", session)
 
   const renderNavLinks = () => {
-    if (!user) {
+    if (!session) {
       return (
         <>
-          <a href="/signup" className="navbar-item">Become A Member!</a>
+          {/* <a href="/signup" className="navbar-item">Become A Member!</a> */}
+          <button onClick={() => signIn()} className="navbar-item">Become A Member!</button>
         </>
       );
     }
@@ -18,12 +26,13 @@ export default function Nav() {
     return (
       <>
         <a href="/jobs" className="navbar-item">Jobs</a>
-        {user?.isWorker && (
+        {user && user.isWorker && (
           <>
             <a href="/findings" className="navbar-item">Findings</a>
             <a href="/recommendations" className="navbar-item">Recommendations</a>
           </>
         )}
+        <button onClick={() => signOut()}>Sign Out</button>
       </>
     );
   };
