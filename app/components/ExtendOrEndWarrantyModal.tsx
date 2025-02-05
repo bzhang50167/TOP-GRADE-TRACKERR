@@ -4,13 +4,13 @@ import { Job } from "@/lib/types";
 export default function ExtendOrEndWarrantyModal(job: Job) {
 
     const extendWarranty = async () => {
-        console.log('hit')
+        // console.log('hit')
         await createWarranty(job.warranty + 1, job.id);
         window.location.href = "/";
       }
 
       const endWarranty = async () => {
-        console.log('hit')
+        // console.log('hit')
         await createWarranty(0, job.id);
         window.location.href = "/";
       }

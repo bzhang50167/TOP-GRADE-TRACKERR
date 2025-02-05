@@ -3,6 +3,7 @@
 import Image from "next/image";
 import logoPlaceHolder from "@/public/logo-placeholder.png";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 
 export default function Nav() {
@@ -10,6 +11,8 @@ export default function Nav() {
   // const user = { isWorker: true };
   // const user = false;
   const { data: session, status } = useSession();
+
+  // console.log("Session: ", session)
 
   if (status === "loading") {
     return (
@@ -31,15 +34,17 @@ export default function Nav() {
       return (
         <>
           {/* <a href="/signup" className="navbar-item">Become A Member!</a> */}
-          <button onClick={() => signIn()} className="navbar-item">Become A Member!</button>
+          <button onClick={() => signIn().then()} className="navbar-item">Become A Member!</button>
         </>
       );
     }
 
+    const { user } = session;
+
     return (
       <>
         <a href="/jobs" className="navbar-item">Jobs</a>
-        {user && user.isWorker && (
+        {user.isAdmin && (
           <>
             <a href="/findings" className="navbar-item">Findings</a>
             <a href="/recommendations" className="navbar-item">Recommendations</a>

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { fetchJobs } from '../components/dispatch';
-import Nav from '../components/nav';
 import { useRouter } from 'next/navigation';
 import AddNewJobModal from '../components/AddNewJobModal';
 import { Job } from '@/lib/types';

@@ -1,5 +1,4 @@
 import prisma from "@/lib/prisma";
-// prisma = require("@/lib/prisma");
 
 type User = {
   name: string;
