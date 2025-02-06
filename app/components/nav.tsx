@@ -7,12 +7,8 @@ import { redirect } from "next/navigation";
 
 
 export default function Nav() {
-  const user = { isWorker: false };
-  // const user = { isWorker: true };
-  // const user = false;
   const { data: session, status } = useSession();
 
-  // console.log("Session: ", session)
 
   if (status === "loading") {
     return (
@@ -29,15 +25,19 @@ export default function Nav() {
     );
   }
 
+  if (!session) {
+    return null
+  }
+
   const renderNavLinks = () => {
-    if (!session) {
-      return (
-        <>
-          {/* <a href="/signup" className="navbar-item">Become A Member!</a> */}
-          <button onClick={() => signIn().then()} className="navbar-item">Become A Member!</button>
-        </>
-      );
-    }
+    // if (!session) {
+    //   return (
+    //     <>
+    //       {/* <a href="/signup" className="navbar-item">Become A Member!</a> */}
+    //       <button onClick={() => signIn().then()} className="navbar-item">Become A Member!</button>
+    //     </>
+    //   );
+    // }
 
     const { user } = session;
 
@@ -54,6 +54,7 @@ export default function Nav() {
       </>
     );
   };
+
 
   return (
     <header className="navbar bg-primary">

@@ -51,6 +51,7 @@ export const authOptions: NextAuthOptions = {
         const dbUser = await prisma.user.findUnique({
           where: { email: user.email! },
         });
+        console.log("dbUser => ", dbUser);
         // console.log("hitting jwt callback")
         // console.log(dbUser)
         if (dbUser) {
@@ -58,11 +59,24 @@ export const authOptions: NextAuthOptions = {
           token.name = dbUser.name;
           token.phone = dbUser.phone;
           token.isAdmin = dbUser.isAdmin;
+        } else {
+          const newUser = await prisma.user.create({
+            data: {
+              email: user.email!,
+              password: "123abc!",
+              isAdmin: false,
+              phone: "123-456-7890",
+            }
+          })
+          console.log("new user created => ", newUser)
+          token.aid = newUser.id;
+          token.name = newUser.name;
+          token.phone = newUser.phone;
+          token.isAdmin = newUser.isAdmin;
         }
       }
       return token;
     },
-
     async session({ session, token }) {
       // Attach the DB user information to the session
       if (session.user) {
@@ -72,6 +86,13 @@ export const authOptions: NextAuthOptions = {
         session.user.isAdmin = token.isAdmin;
       }
       return session;
+    },
+    async redirect({ url, baseUrl }) {
+      // You can modify the redirect URL here, or keep the default behavior
+      if (url.startsWith(baseUrl)) {
+        return baseUrl; // This redirects to the homepage (or root) after signing in
+      }
+      return url; // This allows the URL to be dynamic if needed
     },
   },
 };
