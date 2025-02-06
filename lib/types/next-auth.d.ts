@@ -1,26 +1,30 @@
 import NextAuth, { DefaultSession, DefaultUser } from "next-auth";
+import { JWT } from "next-auth/jwt";
+
+// Extending the JWT type to include custom fields
+declare module "next-auth/jwt" {
+  interface JWT {
+    id: number;
+    name: string | null;
+    phone: string | null;
+    isAdmin: boolean;
+  }
+}
 
 declare module "next-auth" {
   interface Session {
-    user: DefaultSession["user"] & {
-      id: string;
-      name?: string;
-      phone?: string;
+    user: {
+      id: number;
+      name: string | null;
+      phone: string | null;
       isAdmin: boolean;
-    };
+    } & DefaultSession["user"];
   }
 
   interface User extends DefaultUser {
-        id: string;
-        name?: string;
-        phone?: string;
-        isAdmin: boolean;
-    }
-
-interface JWT {
-        id: string;
-        name?: string;
-        phone?: string;
+        id: number;
+        name: string | null;
+        phone: string | null;
         isAdmin: boolean;
     }
 }
