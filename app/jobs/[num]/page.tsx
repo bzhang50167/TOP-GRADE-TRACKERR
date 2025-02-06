@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { createWarranty, fetchJob } from "../../components/dispatch";
 import { redirect } from "next/navigation";
-import Nav from "@/app/components/nav";
 import ExtendOrEndWarrantyModal from "@/app/components/ExtendOrEndWarrantyModal";
 
 const loadScript = (url: string, callback: () => void) => {
@@ -123,13 +122,13 @@ const StreetViewPage: React.FC<StreetViewPageProps> = ({ job }) => {
   }
 
   const extendWarranty = async () => {
-    console.log('hit')
+    // console.log('hit')
     await createWarranty(job.warranty + 1, job.id);
     window.location.href = "/";
   }
 
   const endWarranty = async () => {
-    console.log('hit')
+    // console.log('hit')
     await createWarranty(0, job.id);
     window.location.href = "/";
   }

@@ -71,7 +71,7 @@ export default function AddNewJobModal() {
   };
 
   const submitData = async () => {
-    console.log("clicked");
+    // console.log("clicked");
     if (
       street === "" ||
       city === "" ||

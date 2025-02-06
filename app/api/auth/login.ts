@@ -21,7 +21,7 @@ interface LoginRequestBody {
 //       // Find user by username
 //       const user = await prisma.user.findUnique({
 //         where: {
-//           username: username,
+//           name: username,
 //         },
 //       });
 

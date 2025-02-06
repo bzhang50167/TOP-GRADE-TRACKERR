@@ -1,5 +1,4 @@
 import prisma from "@/lib/prisma";
-// prisma = require("@/lib/prisma");
 
 type User = {
   name: string;
@@ -75,13 +74,13 @@ function getUsers(): Array<User> {
       isAdmin: true,
       phone: "123 456 7890",
     },
-    {
-      name: "David Kim",
-      email: "dhskim22@gmail.com",
-      password: "abc123!",
-      isAdmin: true,
-      phone: "139 730 8185",
-    },
+    // {
+    //   name: "David Kim",
+    //   email: "dhskim22@gmail.com",
+    //   password: "abc123!",
+    //   isAdmin: true,
+    //   phone: "139 730 8185",
+    // },
     {
       email: "bao4ltyfe@gmail.com",
       name: "bao",
