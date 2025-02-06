@@ -49,7 +49,8 @@ export async function POST(req: NextRequest) {
         description: guestNotes ? `Additional Details: ${guestNotes}` : undefined,
         start: { dateTime: new Date(startTime).toISOString() },
         end: { dateTime: addMinutes(new Date(startTime), durationInMinutes).toISOString() },
-        summary: `${guestName} + ${calendarUser.data.name}: ${eventName}`,
+        // summary: `${guestName} + ${calendarUser.data.name}: ${eventName}`,
+        summary: `${eventName}`,
       },
     });
 

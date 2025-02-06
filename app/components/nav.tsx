@@ -63,7 +63,7 @@ export default function Nav() {
         <Image src={logoPlaceHolder} alt="logo" className="logo" />
       </nav>
       <nav className="navbar-end">
-        <a href="/about-us" className="navbar-item">About Us</a>
+        {/* <a href="/about-us" className="navbar-item">About Us</a> */}
         <a href="/calendar" className="navbar-item">Calendar</a>
         {renderNavLinks()}
         <span style={{ color: "white" }}>(510) 949-7009</span>
