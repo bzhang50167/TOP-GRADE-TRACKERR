@@ -23,13 +23,6 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="en">
-        <head>
-          <script
-            defer
-            src="https://kit.fontawesome.com/a076d05399.js"
-            crossOrigin="anonymous"
-          ></script>
-        </head>
         <body className={inter.className}>
           <Nav />
           {children}

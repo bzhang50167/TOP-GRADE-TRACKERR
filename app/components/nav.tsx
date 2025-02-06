@@ -64,6 +64,7 @@ export default function Nav() {
       </nav>
       <nav className="navbar-end">
         <a href="/about-us" className="navbar-item">About Us</a>
+        <a href="/calendar" className="navbar-item">Calendar</a>
         {renderNavLinks()}
         <span style={{ color: "white" }}>(510) 949-7009</span>
       </nav>

@@ -22,3 +22,4 @@ export interface Job {
     scheduledDate: string;
     warranty: number;
   }
+

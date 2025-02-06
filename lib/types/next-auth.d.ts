@@ -8,6 +8,7 @@ declare module "next-auth/jwt" {
     name: string | null;
     phone: string | null;
     isAdmin: boolean;
+    accessToken: string;
   }
 }
 
@@ -18,13 +19,15 @@ declare module "next-auth" {
       name: string | null;
       phone: string | null;
       isAdmin: boolean;
+      accessToken: string;
     } & DefaultSession["user"];
   }
 
   interface User extends DefaultUser {
-        id: number;
-        name: string | null;
-        phone: string | null;
-        isAdmin: boolean;
+    id: number;
+    name: string | null;
+    phone: string | null;
+    isAdmin: boolean;
+    accessToken: string;
     }
 }
