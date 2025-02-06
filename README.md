@@ -5,7 +5,7 @@
 3. npm run seed <!--Run seeder files-->
 4. npm run dev <!--Start the server with "next dev"-->
 5. npx prisma studio <!--Opens database models in browser-->
-6. npx prisma generate <!--Generates the Prisma Client-->
+6.  <!--Generates the Prisma Client-->
 
 
 ## Tech Stack

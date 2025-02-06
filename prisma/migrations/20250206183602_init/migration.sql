@@ -3,10 +3,10 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT,
-    "password" TEXT NOT NULL,
+    "password" TEXT,
     "profilePicture" TEXT,
     "isAdmin" BOOLEAN NOT NULL,
-    "phone" TEXT NOT NULL,
+    "phone" TEXT,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
