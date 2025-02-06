@@ -3,35 +3,11 @@
 import HomepageCarousel from "./components/homepageCarousel";
 import CopyrightFooter from "./components/copyrightFooter";
 import LandingHeader from "./components/LandingHeader";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons/faArrowDown";
 import { useRef, useEffect, useState } from "react";
 
 export default function Home() {
 
   const aboutUsRef = useRef(null);
-
-
-
-  // useEffect(() => {
-  //   if (typeof window === "undefined") return;
-  //   const handleScroll = () => {
-  //     console.log("window scrollY value ", window.scrollY);
-  //     // Show the arrow button only when scrolled to the top of the page
-  //     if (window.scrollY < 50) {
-  //       // Adjust this value based on how far you want to scroll before hiding
-  //       setIsVisible(true);
-  //     } else {
-  //       setIsVisible(false);
-  //     }
-  //   };
-
-  //   // Add event listener for scroll
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Cleanup the event listener on component unmount
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   const testimonialCardStyle =
     "flex flex-col h-[100px] w-[200px] border-2 border-black items-center";
@@ -41,25 +17,7 @@ export default function Home() {
     <div className="flex flex-col h-full overflow-auto">
       <main className="flex flex-col w-full justify-start items-center gap-16">
         <LandingHeader aboutUsRef={aboutUsRef}/>
-        {/* {isVisible && (
-          <div
-            onClick={scrollToAboutUs}
-            // className="flex w-[30px] h-[30px] justify-center items-center border-2 border-green-500 rounded-md hover:bg-gray-300 cursor-pointer duration-300"
-            className="sticky bottom-[100px] left-1/2 transform -translate-x-1/2 text-3xl cursor-pointer"
-            // style={{
-            //   position: "fixed",
-            //   bottom: "100px",
-            //   left: "50%",
-            //   transform: "translateX(-50%)",
-            //   background: "transparent",
-            //   border: "none",
-            //   fontSize: "2rem",
-            //   cursor: "pointer",
-            // }}
-          >
-            <FontAwesomeIcon icon={faArrowDown} />
-          </div>
-        )} */}
+
         {/* <HomepageCarousel /> */}
         <section
           id="about-us"

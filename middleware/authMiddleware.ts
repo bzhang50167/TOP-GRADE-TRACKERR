@@ -7,11 +7,9 @@ export async function authMiddleware(req: NextRequest) {
     // Pass the cookies to getSession
     // const session = await getSession({ req: mockReq });
 //   const session = await getSession({ req });
-  console.log('session in middleware', session)
 
   if (!session) {
     // Redirect to the homepage if no session is found
-    console.log('hitting NULL SESSION')
     return NextResponse.redirect(new URL("/", req.url));
   }
 

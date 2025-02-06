@@ -47,13 +47,10 @@ export const authOptions: NextAuthOptions = {
         }
       }
 
-      console.log('token at the end of jwt callback', token)
       return token;
     },
     async session({ session, token }) {
-      console.log('token in session callback', token)
       // Attach the DB user information to the session
-      // console.log("Token in session callback ===> ", token)
 
       if (session.user && token) {
         session.user.id = token.id;
@@ -64,7 +61,6 @@ export const authOptions: NextAuthOptions = {
       if (token.accessToken) {
         session.user.accessToken = token.accessToken;
       }
-      // console.log("Session at the end of session callback ===>", session)
 
       return session;
     },

@@ -10,7 +10,6 @@ async function getOAuthClient(accessToken: string) {
     process.env.GOOGLE_CLIENT_SECRET,
     process.env.GOOGLE_REDIRECT_URL
   );
-  console.log("access token in getOauthclient ===>", accessToken)
 
   oAuthClient.setCredentials({
     access_token: accessToken,
@@ -22,16 +21,12 @@ async function getOAuthClient(accessToken: string) {
 // export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export async function POST(req: NextRequest) {
 
-  // const { guestName, guestEmail, startTime, durationInMinutes, eventName, guestNotes } = req.body;
   const { guestName, guestEmail, startTime, durationInMinutes, eventName, guestNotes } = await req.json();
-
-  // console.log("auth Options ==>", authOptions)
 
   const session = await getServerSession(authOptions);
 
   if (!session || !session.user) {
     return new Response("User is not authenticated", { status: 401 })
-    // return res.status(401).json({ error: "User is not authenticated" });
   }
 
   try {
@@ -58,11 +53,9 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // return res.status(200).json(calendarEvent.data);
     return new Response(JSON.stringify(calendarEvent), { status: 200 })
   } catch (error) {
     console.error("Error creating calendar event:", error);
-    // return res.status(500).json({ error: "Failed to create calendar event" });
     return new Response("Failed to create calendar event", { status: 500 })
   }
 }
