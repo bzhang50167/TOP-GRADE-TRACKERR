@@ -18,8 +18,40 @@ async function getOAuthClient(accessToken: string) {
   return oAuthClient;
 }
 
+export async function GET() {
+
+  const session = await getServerSession(authOptions);
+
+  if (!session || !session.user) {
+    return new Response("User is not authenticated", { status: 401 })
+  }
+
+  try {
+
+    const oAuthClient = await getOAuthClient(session.user.accessToken);
+    const calendarUser = await google.oauth2("v2").userinfo.get({ auth: oAuthClient });
+
+    const calendarEvents = await google.calendar("v3").events.list({
+      auth: oAuthClient,
+      calendarId: "primary",
+      timeMin: new Date().toISOString(), // Optional: filter events starting from now
+      maxResults: 20, // Optional: limit the number of results
+      singleEvents: true, // Optional: expand recurring events into instances
+      orderBy: "startTime", // Optional: order events by start time
+    })
+
+    // console.log(calendarEvents)
+    const events = calendarEvents.data.items
+    return new Response (JSON.stringify(events), { status: 200 })
+
+  } catch (error) {
+    console.error("Error getting calendar event:", error);
+    return new Response("Failed to get calendar events", { status: 500 })
+  }
+}
+
 // export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export async function POST(req: NextRequest) {
+  export async function POST(req: NextRequest) {
 
   const { guestName, guestEmail, startTime, durationInMinutes, eventName, guestNotes } = await req.json();
 
@@ -49,7 +81,8 @@ export async function POST(req: NextRequest) {
         description: guestNotes ? `Additional Details: ${guestNotes}` : undefined,
         start: { dateTime: new Date(startTime).toISOString() },
         end: { dateTime: addMinutes(new Date(startTime), durationInMinutes).toISOString() },
-        summary: `${guestName} + ${calendarUser.data.name}: ${eventName}`,
+        // summary: `${guestName} + ${calendarUser.data.name}: ${eventName}`,
+        summary: `${eventName}`,
       },
     });
 

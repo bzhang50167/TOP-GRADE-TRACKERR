@@ -1,11 +1,15 @@
-import { useState } from "react";
+"use client";
+
+import { useSession } from "next-auth/react";
+import { useState, FormEvent } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Ensure to import the CSS for DatePicker
 import { createJob } from "./dispatch";
 
 export default function AddNewJobModal() {
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
-  const [date, setDate] = useState<string | null>(null); // Change type to string | null
+
+  // const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [date, setDate] = useState<Date | null>(new Date()); // Change type to string | null
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -49,42 +53,30 @@ export default function AddNewJobModal() {
     setWarranty(e.target.value);
   };
 
-  const handleDateChange = (date: Date | null) => {
-    setStartDate(date);
-    if (date) {
-      // Format date in ISO string format
-      const isoString = date.toISOString();
-      setDate(isoString);
-    }
-  };
+  // const handleDateChange = (date: Date | null) => {
+  //   setStartDate(date);
+  //   if (date) {
+  //     // Format date in ISO string format
+  //     const isoString = date.toISOString();
+  //     setDate(isoString);
+  //   }
+  // };
 
-  const isFormValid = () => {
-    return (
-      name.trim() !== "" &&
-      email.trim() !== "" &&
-      phone.trim() !== "" &&
-      street.trim() !== "" &&
-      city.trim() !== "" &&
-      state.trim() !== "" &&
-      description.trim() !== ""
-    );
-  };
+  // const isFormValid = () => {
+  //   return true
+  //   return (
+  //     name.trim() !== "" &&
+  //     email.trim() !== "" &&
+  //     phone.trim() !== "" &&
+  //     street.trim() !== "" &&
+  //     city.trim() !== "" &&
+  //     state.trim() !== "" &&
+  //     description.trim() !== ""
+  //   );
+  // };
 
-  const submitData = async () => {
-    // console.log("clicked");
-    if (
-      street === "" ||
-      city === "" ||
-      state === "" ||
-      description === "" ||
-      name === "" ||
-      phone === "" ||
-      date === null ||
-      email === ""
-    ) {
-      console.error("Form validation failed");
-      return;
-    }
+  const handleCreateJobOnCalendar = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     const address = `${street}, ${city}, ${state}`;
     const passingData = {
@@ -98,13 +90,172 @@ export default function AddNewJobModal() {
       warranty: +warranty,
     };
 
+    // console.log(passingData);
+
     try {
-      const res = await createJob(passingData);
-      console.log("Job created:", res);
+      // return console.log("hitting try");
+      const res = await fetch("/api/calendar/create-event", {
+        method: "POST",
+        body: JSON.stringify({
+          guestName: "David Kim",
+          guestEmail: "dhskim22@gmail.com",
+          // guestName: "Bao Zhang",
+          // guestEmail: "bzhang50167@gmail.com",
+          // guestEmail: "office.topgradetermite@gmail.com",
+          startTime: date,
+          durationInMinutes: 60,
+          eventName: "Inspection Appointment " + address,
+          guestNotes: description,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        return console.log("Event created successfully:", data);
+      }
     } catch (error) {
-      console.error("Error creating job:", error);
+      console.error("Failed to create event:", error);
     }
   };
+
+  const renderFormInputs = () => {
+    return (
+      <>
+        <div className="w-full">
+          <label className="sr-only" htmlFor="name">
+            Client Name
+          </label>
+          <input
+            className="input input-solid max-w-full"
+            placeholder="Client Name"
+            type="text"
+            id="name"
+            value={name}
+            onChange={handleNameChange}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="sr-only" htmlFor="email">
+              Client Email
+            </label>
+            <input
+              className="input input-solid"
+              placeholder="Client Email address"
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+          </div>
+
+          <div>
+            <label className="sr-only" htmlFor="phone">
+              Client Phone
+            </label>
+            <input
+              className="input input-solid"
+              placeholder="Client Phone Number"
+              type="tel"
+              id="phone"
+              value={phone}
+              onChange={handlePhoneChange}
+            />
+          </div>
+
+          <div>
+            <label className="sr-only" htmlFor="address">
+              Address
+            </label>
+            <input
+              className="input input-solid"
+              placeholder="Address"
+              type="text"
+              id="address"
+              value={street}
+              onChange={handleStreetChange}
+            />
+          </div>
+
+          <div>
+            <label className="sr-only" htmlFor="city">
+              City
+            </label>
+            <input
+              className="input input-solid"
+              placeholder="City"
+              type="text"
+              id="city"
+              value={city}
+              onChange={handleCityChange}
+            />
+          </div>
+
+          <div>
+            <label className="sr-only" htmlFor="state">
+              State
+            </label>
+            <input
+              className="input input-solid"
+              placeholder="State"
+              type="text"
+              id="state"
+              value={state}
+              onChange={handleStateChange}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className="sr-only" htmlFor="warranty">
+            Warranty
+          </label>
+          <textarea
+            className="input input-solid"
+            placeholder="Warranty"
+            id="warranty"
+            value={warranty}
+            onChange={handleWarrantyChange}
+          ></textarea>
+        </div>
+
+        <div className="w-full">
+          <label className="sr-only" htmlFor="description">
+            Description
+          </label>
+          <textarea
+            className="textarea textarea-solid max-w-full"
+            placeholder="Description"
+            id="description"
+            value={description}
+            onChange={handleDescriptionChange}
+          ></textarea>
+        </div>
+
+        <div className="w-full">
+          <label className="sr-only" htmlFor="dateTime">
+            Select Date and Time
+          </label>
+          <DatePicker
+            selected={date}
+            onChange={setDate}
+            showTimeSelect
+            timeFormat="HH:mm"
+            timeIntervals={30}
+            timeCaption="Time"
+            dateFormat="MMMM d, yyyy h:mm aa"
+            minDate={new Date()}
+            className="input input-solid"
+          />
+        </div>
+      </>
+    );
+  };
+
 
   return (
     <div className="modal">
@@ -119,143 +270,13 @@ export default function AddNewJobModal() {
         <h2 className="text-xl">Adding Job</h2>
         <section className="bg-gray-2 rounded-xl">
           <div className="p-8 shadow-lg">
-            <form className="space-y-4">
-              <div className="w-full">
-                <label className="sr-only" htmlFor="name">
-                  Client Name
-                </label>
-                <input
-                  className="input input-solid max-w-full"
-                  placeholder="Client Name"
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={handleNameChange}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label className="sr-only" htmlFor="email">
-                    Client Email
-                  </label>
-                  <input
-                    className="input input-solid"
-                    placeholder="Client Email address"
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={handleEmailChange}
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="phone">
-                    Client Phone
-                  </label>
-                  <input
-                    className="input input-solid"
-                    placeholder="Client Phone Number"
-                    type="tel"
-                    id="phone"
-                    value={phone}
-                    onChange={handlePhoneChange}
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="address">
-                    Address
-                  </label>
-                  <input
-                    className="input input-solid"
-                    placeholder="Address"
-                    type="text"
-                    id="address"
-                    value={street}
-                    onChange={handleStreetChange}
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="city">
-                    City
-                  </label>
-                  <input
-                    className="input input-solid"
-                    placeholder="City"
-                    type="text"
-                    id="city"
-                    value={city}
-                    onChange={handleCityChange}
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="state">
-                    State
-                  </label>
-                  <input
-                    className="input input-solid"
-                    placeholder="State"
-                    type="text"
-                    id="state"
-                    value={state}
-                    onChange={handleStateChange}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="sr-only" htmlFor="warranty">
-                  Warranty
-                </label>
-                <textarea
-                  className="input input-solid"
-                  placeholder="Warranty"
-                  id="warranty"
-                  value={warranty}
-                  onChange={handleWarrantyChange}
-                ></textarea>
-              </div>
-
-              <div className="w-full">
-                <label className="sr-only" htmlFor="description">
-                  Description
-                </label>
-                <textarea
-                  className="textarea textarea-solid max-w-full"
-                  placeholder="Description"
-                  id="description"
-                  value={description}
-                  onChange={handleDescriptionChange}
-                ></textarea>
-              </div>
-
-              <div className="w-full">
-                <label className="sr-only" htmlFor="dateTime">
-                  Select Date and Time
-                </label>
-                <DatePicker
-                  selected={startDate}
-                  onChange={handleDateChange}
-                  showTimeSelect
-                  timeFormat="HH:mm"
-                  timeIntervals={30}
-                  timeCaption="Time"
-                  dateFormat="MMMM d, yyyy h:mm aa"
-                  minDate={new Date()}
-                  className="input input-solid"
-                />
-              </div>
+            <form className="space-y-4" onSubmit={handleCreateJobOnCalendar}>
+              {renderFormInputs()}
               <button
-                onClick={submitData}
-                className={`btn btn-error btn-block ${
-                  isFormValid() ? "" : "disabled"
-                }`}
-                disabled={!isFormValid()}
+                className="btn btn-error btn-block"
+                type="submit"
               >
-                Add
+                Create Event
               </button>
 
               <button className="btn btn-block">Cancel</button>
