@@ -21,7 +21,7 @@ export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
 
   const handleSignin = () => {
     signIn("google", {
-      callbackUrl: `${window.location.origin}/jobs`,
+      callbackUrl: `${window.location.origin}/calendar`,
     });
   };
 

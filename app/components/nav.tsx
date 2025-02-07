@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import logoPlaceHolder from "@/public/logo-placeholder.png";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
-
+import { signOut, useSession } from "next-auth/react";
 
 export default function Nav() {
   const { data: session, status } = useSession();
 
+  const handleSignOut = () => {
+    signOut({ callbackUrl: window.location.origin });  // Redirect to the root page
+  };
 
   if (status === "loading") {
     return (
@@ -26,47 +27,35 @@ export default function Nav() {
   }
 
   if (!session) {
-    return null
+    return null;
   }
-
-  const renderNavLinks = () => {
-    // if (!session) {
-    //   return (
-    //     <>
-    //       {/* <a href="/signup" className="navbar-item">Become A Member!</a> */}
-    //       <button onClick={() => signIn().then()} className="navbar-item">Become A Member!</button>
-    //     </>
-    //   );
-    // }
-
-    const { user } = session;
-
-    return (
-      <>
-        <a href="/jobs" className="navbar-item">Jobs</a>
-        {user.isAdmin && (
-          <>
-            <a href="/findings" className="navbar-item">Findings</a>
-            <a href="/recommendations" className="navbar-item">Recommendations</a>
-          </>
-        )}
-        <button onClick={() => signOut()}>Sign Out</button>
-      </>
-    );
-  };
-
 
   return (
     <header className="navbar bg-primary">
       <nav className="navbar-start">
-        <a href="/" className="navbar-item">Top Grade</a>
+        <a href="/" className="navbar-item">
+          Top Grade
+        </a>
         <Image src={logoPlaceHolder} alt="logo" className="logo" />
       </nav>
       <nav className="navbar-end">
         {/* <a href="/about-us" className="navbar-item">About Us</a> */}
-        <a href="/calendar" className="navbar-item">Calendar</a>
-        {renderNavLinks()}
+        <a href="/calendar" className="navbar-item">
+          Calendar
+        </a>
         <span style={{ color: "white" }}>(510) 949-7009</span>
+        {/* {renderNavLinks()} */}
+        {session.user.isAdmin && (
+          <>
+            <a href="/findings" className="navbar-item">
+              Findings
+            </a>
+            <a href="/recommendations" className="navbar-item">
+              Recommendations
+            </a>
+          </>
+        )}
+        <button onClick={handleSignOut}>Sign Out</button>
       </nav>
     </header>
   );

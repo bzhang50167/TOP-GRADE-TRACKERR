@@ -17,5 +17,5 @@ export async function authMiddleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/jobs", "/findings", "/recommendations"],  // List paths you want to protect
+  matcher: ["/jobs", "/findings", "/recommendations", "/calendar"],  // List paths you want to protect
 };

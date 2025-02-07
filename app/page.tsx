@@ -4,6 +4,7 @@ import HomepageCarousel from "./components/homepageCarousel";
 import CopyrightFooter from "./components/copyrightFooter";
 import LandingHeader from "./components/LandingHeader";
 import { useRef, useEffect, useState } from "react";
+import Nav from "./components/nav";
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     // <div className="flex flex-col h-[calc(100vh-110px)] overflow-auto" >
     <div className="flex flex-col h-full overflow-auto">
+      <Nav />
       <main className="flex flex-col w-full justify-start items-center gap-16">
         <LandingHeader aboutUsRef={aboutUsRef}/>
 

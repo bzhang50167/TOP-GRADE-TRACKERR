@@ -7,10 +7,9 @@ import "react-datepicker/dist/react-datepicker.css"; // Ensure to import the CSS
 import { createJob } from "./dispatch";
 
 export default function AddNewJobModal() {
-  const { data: session } = useSession();
 
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
-  const [date, setDate] = useState<string | null>(null); // Change type to string | null
+  // const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [date, setDate] = useState<Date | null>(new Date()); // Change type to string | null
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -54,27 +53,27 @@ export default function AddNewJobModal() {
     setWarranty(e.target.value);
   };
 
-  const handleDateChange = (date: Date | null) => {
-    setStartDate(date);
-    if (date) {
-      // Format date in ISO string format
-      const isoString = date.toISOString();
-      setDate(isoString);
-    }
-  };
+  // const handleDateChange = (date: Date | null) => {
+  //   setStartDate(date);
+  //   if (date) {
+  //     // Format date in ISO string format
+  //     const isoString = date.toISOString();
+  //     setDate(isoString);
+  //   }
+  // };
 
-  const isFormValid = () => {
-    return true
-    return (
-      name.trim() !== "" &&
-      email.trim() !== "" &&
-      phone.trim() !== "" &&
-      street.trim() !== "" &&
-      city.trim() !== "" &&
-      state.trim() !== "" &&
-      description.trim() !== ""
-    );
-  };
+  // const isFormValid = () => {
+  //   return true
+  //   return (
+  //     name.trim() !== "" &&
+  //     email.trim() !== "" &&
+  //     phone.trim() !== "" &&
+  //     street.trim() !== "" &&
+  //     city.trim() !== "" &&
+  //     state.trim() !== "" &&
+  //     description.trim() !== ""
+  //   );
+  // };
 
   const handleCreateJobOnCalendar = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -91,17 +90,17 @@ export default function AddNewJobModal() {
       warranty: +warranty,
     };
 
-    console.log(passingData);
+    // console.log(passingData);
 
     try {
       // return console.log("hitting try");
       const res = await fetch("/api/calendar/create-event", {
         method: "POST",
         body: JSON.stringify({
-          // guestName: "Bao Zhang",
-          // guestEmail: "bzhang50167@gmail.com",
           guestName: "David Kim",
           guestEmail: "dhskim22@gmail.com",
+          // guestName: "Bao Zhang",
+          // guestEmail: "bzhang50167@gmail.com",
           // guestEmail: "office.topgradetermite@gmail.com",
           startTime: date,
           durationInMinutes: 60,
@@ -242,8 +241,8 @@ export default function AddNewJobModal() {
             Select Date and Time
           </label>
           <DatePicker
-            selected={startDate}
-            onChange={handleDateChange}
+            selected={date}
+            onChange={setDate}
             showTimeSelect
             timeFormat="HH:mm"
             timeIntervals={30}
@@ -274,10 +273,7 @@ export default function AddNewJobModal() {
             <form className="space-y-4" onSubmit={handleCreateJobOnCalendar}>
               {renderFormInputs()}
               <button
-                className={`btn btn-error btn-block ${
-                  isFormValid() ? "" : "disabled"
-                }`}
-                disabled={!isFormValid()}
+                className="btn btn-error btn-block"
                 type="submit"
               >
                 Create Event

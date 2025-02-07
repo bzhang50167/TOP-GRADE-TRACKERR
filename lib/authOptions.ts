@@ -66,7 +66,7 @@ export const authOptions: NextAuthOptions = {
     },
     async redirect({ url, baseUrl }) {
       // You can modify the redirect URL here, or keep the default behavior
-      if (url.startsWith(baseUrl)) {
+      if (url === baseUrl) {
         return baseUrl; // This redirects to the homepage (or root) after signing in
       }
       return url; // This allows the URL to be dynamic if needed
