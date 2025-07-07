@@ -1,6 +1,5 @@
 "use client";
 
-import { signIn, useSession } from "next-auth/react";
 
 import React, { useRef } from "react";
 
@@ -9,7 +8,6 @@ interface LandingHeaderProps {
 }
 
 export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
-  const { data: session } = useSession();
 
   const scrollToAboutUs = () => {
     // Scroll smoothly to the section using the ref
