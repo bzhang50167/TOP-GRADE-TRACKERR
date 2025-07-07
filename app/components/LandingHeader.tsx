@@ -19,11 +19,6 @@ export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
     }
   };
 
-  const handleSignin = () => {
-    signIn("google", {
-      callbackUrl: `${window.location.origin}/calendar`,
-    });
-  };
 
   return (
     <section
@@ -36,13 +31,6 @@ export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
       <p className="text-sm">
         Professional expertise for your termite control needs!
       </p>
-
-      {!session && (
-        <button onClick={handleSignin} className="navbar-item">
-          {" "}
-          Become A Member!
-        </button>
-      )}
 
       {/* <FontAwesomeIcon icon={faArrowDown} /> */}
 
