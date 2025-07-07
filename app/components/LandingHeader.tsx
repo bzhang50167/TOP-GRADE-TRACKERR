@@ -1,8 +1,7 @@
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons/faArrowDown";
+
 import React, { useRef } from "react";
 
 interface LandingHeaderProps {
@@ -39,7 +38,6 @@ export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
         // className="flex w-[30px] h-[30px] justify-center items-center border-2 border-green-500 rounded-md hover:bg-gray-300 cursor-pointer duration-300"
         className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-3xl cursor-pointer"
       >
-        <FontAwesomeIcon icon={faArrowDown} />
       </div>
     </section>
   );
