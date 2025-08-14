@@ -1,4 +1,4 @@
-export default function Login() {
+/*export default function Login() {
   return (
     <main
       style={{
@@ -47,3 +47,4 @@ export default function Login() {
     </main>
   );
 }
+*/

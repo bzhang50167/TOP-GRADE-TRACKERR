@@ -44,9 +44,7 @@ export default function Nav() {
           Calendar
         </a>
         <span style={{ color: "white" }}>(510) 949-7009</span>
-        {/* {renderNavLinks()} */}
-        {session.user.isAdmin && (
-          <>
+        {/* {renderNavLinks()} */}          <>
             <a href="/findings" className="navbar-item">
               Findings
             </a>
@@ -54,7 +52,6 @@ export default function Nav() {
               Recommendations
             </a>
           </>
-        )}
         <button onClick={handleSignOut}>Sign Out</button>
       </nav>
     </header>

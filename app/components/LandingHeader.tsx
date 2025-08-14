@@ -28,6 +28,9 @@ export default function LandingHeader({ aboutUsRef }: LandingHeaderProps) {
       <p className="text-sm">
         Professional expertise for your termite control needs!
       </p>
+      <p>
+        
+      </p>
 
       {/* <FontAwesomeIcon icon={faArrowDown} /> */}
 

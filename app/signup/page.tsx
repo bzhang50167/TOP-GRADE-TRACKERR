@@ -1,4 +1,4 @@
-export default function Signup() {
+/*export default function Signup() {
   return (
     <main
       className="flex flex-col w-full"
@@ -88,3 +88,4 @@ export default function Signup() {
     </main>
   );
 }
+*/
