@@ -1,11 +1,11 @@
 "use client";
 
-import HomepageCarousel from "./components/homepageCarousel";
+// import HomepageCarousel from "./components/homepageCarousel";
 import CopyrightFooter from "./components/copyrightFooter";
 import LandingHeader from "./components/LandingHeader";
 import { useRef, useEffect, useState } from "react";
 import Nav from "./components/nav";
-import data from "../app/recommendations/page";
+import data from "../recommendations.json";
 
 export default function Home() {
 
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section
+        {/* <section
           id="about-us"
           ref={aboutUsRef}
           className="flex flex-col items-center text-center w-[75vw] h-[100vh] gap-8"
@@ -118,7 +118,7 @@ export default function Home() {
               <p>- Happy Customer</p>
             </div>
           </article>
-        </section>
+        </section> */}
       </main>
       <CopyrightFooter />
     </div>
