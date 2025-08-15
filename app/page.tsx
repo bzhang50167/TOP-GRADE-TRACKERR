@@ -5,7 +5,7 @@ import CopyrightFooter from "./components/copyrightFooter";
 import LandingHeader from "./components/LandingHeader";
 import { useRef, useEffect, useState } from "react";
 import Nav from "./components/nav";
-import data from "../app/recommendations";
+import data from "../app/recommendations/page";
 
 export default function Home() {
 
