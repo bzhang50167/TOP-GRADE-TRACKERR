@@ -1,124 +1,90 @@
 "use client";
 
-// import HomepageCarousel from "./components/homepageCarousel";
-import CopyrightFooter from "./components/copyrightFooter";
-import LandingHeader from "./components/LandingHeader";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Nav from "./components/nav";
-import data from "../recommendations.json";
+import LandingHeader from "./components/LandingHeader";
+import CopyrightFooter from "./components/copyrightFooter";
+import recommendations from "../recommendations.json";
+import findings from "../findings.json"; // <-- Add this file!
 
 export default function Home() {
-
   const aboutUsRef = useRef(null);
 
-  const testimonialCardStyle =
-    "flex flex-col h-[100px] w-[200px] border-2 border-black items-center";
+  const [mode, setMode] = useState("recommendations"); // "recommendations" | "findings"
+  const [searchRecommendations, setSearchRecommendations] = useState("");
+  const [searchFindings, setSearchFindings] = useState("");
 
-  const [search, setSearch] = useState("");
+  const currentData =
+    mode === "recommendations" ? recommendations : findings;
 
+  const currentSearch =
+    mode === "recommendations" ? searchRecommendations : searchFindings;
+
+  const setCurrentSearch =
+    mode === "recommendations" ? setSearchRecommendations : setSearchFindings;
+
+  const filteredData = currentData.filter(
+    (el) =>
+      el.code.toLowerCase().includes(currentSearch.toLowerCase()) ||
+      el.text.toLowerCase().includes(currentSearch.toLowerCase())
+  );
 
   return (
-    // <div className="flex flex-col h-[calc(100vh-110px)] overflow-auto" >
-
     <div className="flex flex-col h-full overflow-auto">
       <Nav />
       <main className="flex flex-col w-full justify-start items-center gap-16">
         <LandingHeader aboutUsRef={aboutUsRef} />
 
-        {/* <HomepageCarousel /> */}
-        <div>
-          <div className="table-container p-8">
-            <div className="flex justify-center">
-              <input
-                type="text"
-                placeholder="search recommendations"
-                className="bg-white border-2 p-2 rounded border-slate-500"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-            </div>
-            <div className="table-header grid grid-cols-12">
-              <div className="col-span-1">Code</div>
-              <div className="col-span-11">Text</div>
-            </div>
-            <div className="table-content">
-              {data
-                .filter(
-                  (el) =>
-                    el.code.toLowerCase().includes(search.toLowerCase()) ||
-                    el.text.toLowerCase().includes(search.toLowerCase())
+        <div className="table-container p-8 w-full max-w-4xl">
+          {/* Toggle Button */}
+          <div className="flex justify-center mb-6">
+            <button
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              onClick={() =>
+                setMode((prev) =>
+                  prev === "recommendations" ? "findings" : "recommendations"
                 )
-                .map((el, i) => {
-                  return (
-                    <div
-                      className="single-row grid grid-cols-12 gap-4 border-4"
-                      key={i}
-                    >
-                      <div className="col-span-1">{el.code}</div>
-                      <div className="col-span-11">{el.text}</div>
-                    </div>
-                  );
-                })}
-            </div>
+              }
+            >
+              Switch to {mode === "recommendations" ? "Findings" : "Recommendations"}
+            </button>
+          </div>
+
+          {/* Search Bar */}
+          <div className="flex justify-center mb-6">
+            <input
+              type="text"
+              placeholder={`Search ${mode}`}
+              className="bg-white border-2 p-2 rounded border-slate-500 w-full"
+              value={currentSearch}
+              onChange={(e) => setCurrentSearch(e.target.value)}
+            />
+          </div>
+
+          {/* Table Header */}
+          <div className="table-header grid grid-cols-12 font-bold border-b pb-2 mb-2">
+            <div className="col-span-1">Code</div>
+            <div className="col-span-11">Text</div>
+          </div>
+
+          {/* Filtered Table Rows */}
+          <div className="table-content flex flex-col gap-2">
+            {filteredData.map((el, i) => (
+              <div
+                className="single-row grid grid-cols-12 gap-4 border p-2 rounded"
+                key={i}
+              >
+                <div className="col-span-1">{el.code}</div>
+                <div className="col-span-11">{el.text}</div>
+              </div>
+            ))}
+            {filteredData.length === 0 && (
+              <div className="text-center text-gray-500 italic">
+                No results found.
+              </div>
+            )}
           </div>
         </div>
-        {/* <section
-          id="about-us"
-          ref={aboutUsRef}
-          className="flex flex-col items-center text-center w-[75vw] h-[100vh] gap-8"
-        >
-          <div className="flex flex-col items-center">
-            <h2 className="text-h1">About Us</h2>
-            <p>
-              Top Grade Termite Control specializes in Non Fumigation localized
-              treatments for the control of termite colonies with SAFE State
-              Registered Chemicals to avoid the hassle of having to move out of
-              your home!
-            </p>
-            <p>
-              Our Treatments come with a optional 1 year or 3 year warranty!
-            </p>
-            <p>CA State License # PR8877</p>
-          </div>
-          <div>
-            <h2 className="text-h2">Termite Inspections You Can Trust!</h2>
-            <p>
-              Here at Top Grade Termite Control your inspection reports are
-              guaranteed to ALWAYS include photos of findings
-            </p>
-          </div>
-        </section>
-
-        <section id="features">
-          <h2 className="text-h2">Features</h2>
-          <ul>
-            <li className="text-xl">
-              Lorem ipsum odor amet, consectetuer adipiscing elit.
-            </li>
-            <li>Litora luctus commodo aliquam consequat mus turpis.</li>
-            <li>
-              Vitae inceptos ligula ad iaculis semper ante tortor faucibus.
-            </li>
-          </ul>
-        </section>
-
-        <section id="testimonials" className="flex flex-col items-center">
-          <h2 className="text-h2">What Our Customers Say</h2>
-          <article className="flex gap-14">
-            <div className={testimonialCardStyle}>
-              <blockquote>&quot;This product changed my life!&quot;</blockquote>
-              <p>- Happy Customer</p>
-            </div>
-            <div className={testimonialCardStyle}>
-              <blockquote>&quot;This product changed my life!&quot;</blockquote>
-              <p>- Happy Customer</p>
-            </div>
-            <div className={testimonialCardStyle}>
-              <blockquote>&quot;This product changed my life!&quot;</blockquote>
-              <p>- Happy Customer</p>
-            </div>
-          </article>
-        </section> */}
       </main>
       <CopyrightFooter />
     </div>
