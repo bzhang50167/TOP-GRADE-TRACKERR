@@ -5,6 +5,7 @@ import CopyrightFooter from "./components/copyrightFooter";
 import LandingHeader from "./components/LandingHeader";
 import { useRef, useEffect, useState } from "react";
 import Nav from "./components/nav";
+import data from "../app/recommendations";
 
 export default function Home() {
 
@@ -13,14 +14,54 @@ export default function Home() {
   const testimonialCardStyle =
     "flex flex-col h-[100px] w-[200px] border-2 border-black items-center";
 
+  const [search, setSearch] = useState("");
+
+
   return (
     // <div className="flex flex-col h-[calc(100vh-110px)] overflow-auto" >
+
     <div className="flex flex-col h-full overflow-auto">
       <Nav />
       <main className="flex flex-col w-full justify-start items-center gap-16">
-        <LandingHeader aboutUsRef={aboutUsRef}/>
+        <LandingHeader aboutUsRef={aboutUsRef} />
 
         {/* <HomepageCarousel /> */}
+        <div>
+          <div className="table-container p-8">
+            <div className="flex justify-center">
+              <input
+                type="text"
+                placeholder="search recommendations"
+                className="bg-white border-2 p-2 rounded border-slate-500"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            <div className="table-header grid grid-cols-12">
+              <div className="col-span-1">Code</div>
+              <div className="col-span-11">Text</div>
+            </div>
+            <div className="table-content">
+              {data
+                .filter(
+                  (el) =>
+                    el.code.toLowerCase().includes(search.toLowerCase()) ||
+                    el.text.toLowerCase().includes(search.toLowerCase())
+                )
+                .map((el, i) => {
+                  return (
+                    <div
+                      className="single-row grid grid-cols-12 gap-4 border-4"
+                      key={i}
+                    >
+                      <div className="col-span-1">{el.code}</div>
+                      <div className="col-span-11">{el.text}</div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
         <section
           id="about-us"
           ref={aboutUsRef}
